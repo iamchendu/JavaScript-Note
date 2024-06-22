@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <style>
+        .container{
+            width: 75%;
+            min-width: 500px ;
+            border: 2px solid red;
+            padding: 20px;
+            margin-bottom: 10px;
+            margin: 0 auto  ;
+        }
+
+        .control{
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .group{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<!-- onsubmit process -->
+        <form action="" method="post" onsubmit="checkForm()">
+
+<!-- onfocus and onblur process -->
+            <div class="group">
+                <label for="">Name</label>
+                <input type="text" onfocus="addBg()" onblur="removeBg()" name="" class="control">
+            </div>
+            <div class="group">
+                <label for="">Password</label>
+                <input type="password" onfocus="" onblur="" name="" class="control">
+            </div>
+            <div class="group">
+                <label for="">E-mail</label>
+                <input type="email" onfocus="" onblur="" name="" class="control">
+            </div>
+
+<!-- onchange process -->
+            <div class="group">
+                <label for="">Select State </label>
+                <select name="" class="control" onchange="gets()">
+                    <option value=""> -- Select State -- </option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Bhubneswar">Bhubneswar</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Hyderabadh">Hyderabadh</option>
+                </select>
+            </div>
+            <div class="group">
+                <input type="submit" value="REGISTER" name="" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function addBg(){
+        event.target.style.backgroundColor = "green";
+        event.target.style.color = "white";
+    }
+    function removeBg(){
+        event.target.style.backgroundColor = "transparent";
+        event.target.style.color = "black";
+    }
+    function gets(){
+        console.log(event.target.value);
+    }
+    function checkForm(){
+        // 
+        event.preventDefault();
+        console.log(event);
+        console.log(event.target);
+    }
+</script>
+</html>

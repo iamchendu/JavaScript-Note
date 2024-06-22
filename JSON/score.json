@@ -1,0 +1,22 @@
+{
+    "score" : 180 , 
+    "wickets" : 5 , 
+    "batting" :[
+        {"id" : 1 , "name" : "chendu" , "score" : 20 , "balls" : 5 , "out" : 1},
+        {"id" : 2 , "name" : "rajesh" , "score" : 34 , "balls" : 10 , "out" : 2},
+        {"id" : 3 , "name" : "guna" , "score" : 0 , "balls" :  3, "out" : 2},
+        {"id" : 4 , "name" : "kim" , "score" : 42 , "balls" : 15 , "out" : 1},
+        {"id" : 5 , "name" : "lisa" , "score" : 23 , "balls" :  10, "out" : 0},
+        {"id" : 6 , "name" : "jagan" , "score" : 45 , "balls" :  11, "out" : 4},
+        {"id" : 7 , "name" : "eswar" , "score" : 81, "balls" :  30, "out" : 3},
+        {"id" : 8 , "name" : "om" , "score" :  43, "balls" :  12, "out" : 1},
+        {"id" : 9 , "name" : "loka" , "score" :  0, "balls" :  4, "out" : 2},
+        {"id" : 10 , "name" : "tanu" , "score" :  22, "balls" :  6, "out" : 1}
+    ],
+    "bowling" :[
+        {"id" : 1 , "name" : "Ns" , "wickets" : 0 , "runs" : 15},
+        {"id" : 2 , "name" : "dhoni" , "wickets" : 2 , "runs" : 25},
+        {"id" : 3, "name" : "virat" , "wickets" : 0 , "runs" : 0},
+        {"id" : 21 , "name" : "bumrah" , "wickets" : 1 , "runs" : 20}
+    ]
+}

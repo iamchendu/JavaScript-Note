@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+
+    <h1>In - memory Cookie </h1>
+    
+    <button onclick="createCookie()">Create Cookie </button>
+
+    <div id="info"></div>
+
+    <button onclick="accessCookie()">Access Cookie </button>
+
+    <button onclick="getCookie()">Get Cookie </button>
+
+</body>
+<script>
+
+// In-memory Cookies 
+
+
+// Example  
+
+// How to  Create the Cookie ?
+
+ // It was Saved On --  Inspect ---->  Application ----> Cookies 
+
+    function createCookie(){
+        document.cookie = "userName=RAM";          
+        document.cookie = "city=Hyd";
+        document.cookie = "age=45";
+        console.log("Cookies Done .... ")
+    }
+
+
+
+// Example 
+
+// How to Access The Cookie  ? 
+
+        // function accessCookie(){
+        //     console.log(document.cookie)                 // Whatever create and Add the value  on cookie That all cookies be Access at one time 
+        //     console.log("Hlo World ");
+        // }
+
+
+
+// Example , How To add a Cookie 
+
+//  In-Memeory Cookie , Browser close removed the Cookie 
+
+        function getCookie(key){
+
+            // Example  , It was convert into a array 
+
+                // let arr = document.cookie.split(";")
+                // console.log(arr);
+
+
+            // Exammple , 
+
+                let x = document.cookie.split("; ");
+                for(let item of x)
+                {
+                    let data = item.split("=");
+                    if(data[0] === key)
+                    {
+                        return data[1];             // value getting 
+                    }
+                }
+        }
+
+        // Suppose that property name getting value will be showed , Other wise Undefiend ,, Suppose cookies will be deleted on browser then all cookies showed undefiend 
+
+                // console.log(getCookie("age"));
+                // console.log(getCookie("userName"));
+                // console.log(getCookie("city"));
+                // console.log(getCookie("pin"));          // Undefiend bcoz that property name is not available on cookie 
+
+
+
+</script>
+</html>

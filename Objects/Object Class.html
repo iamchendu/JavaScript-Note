@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Class </title>
+</head>
+<body>
+
+        <h1> Obejct class </h1>
+
+    <script>
+
+
+        var x = { id : 1 , name : "CS" , email : "cS@gmail.com" , city : "HYD"};
+
+// Example  , Push the Some Property to an Object , modify the object 
+
+        Object.assign(x , {pin: 3243});
+        console.log(x);
+
+// Example   ,  It was object or not by checking True , false  
+
+        // console.log(Object.is(x));
+        // console.log(Object.is(10,10))
+        // console.log(Object.is(x,x))
+        // console.log(Object.is(null,null))
+
+
+// Example  ,   Converts all the keys of an object into array 
+
+        console.log(Object.keys(x));
+
+// Example  ,  Converts all the value's of an object into array 
+
+        console.log(Object.values(x));
+
+
+// Example ,  convert Object into an Array 
+
+        console.log(Object.entries(x));
+
+
+// Example , We can not modify object 
+
+        console.log(Object.freeze(x));
+
+
+// Example  , returns true ,  if the object is frozen  
+
+        console.log(Object.isFrozen(x));
+
+// Example   , Returns false , if object is frozen 
+
+        console.log(Object.isExtensible(x));
+
+    </script>
+</body>
+</html>

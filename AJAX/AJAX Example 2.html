@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaX</title>
+
+    <style>
+        #products{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .local{
+            flex: 23%;
+            border: 2px solid red;
+            margin: 5px;
+            padding: 10px;
+
+        }
+    </style>
+
+</head>
+<body>
+        <u><h1>Get Request</h1></u>
+
+    <h1>AjAX LOADING Example </h1>
+
+    <div id="products"></div>
+    <button onclick="loadproduct()">Loading Product </button>
+
+    <img src="200w.gif" id="loader" height="100" width="100" style="display: none;">                <!-- Loader img is Hide -->
+
+
+
+    <script>
+
+        var ele = document.getElementById("products");
+        var load = document.getElementById("loader");
+
+        function loadproduct()
+        {
+
+            load.style.display = "block"                         // Whenever Onclik the button loader image is showed 
+
+        
+                let btn = event.target ;                
+
+                btn.setAttribute("disabled","disabled");                   //  onclick the Button  whenever Data will find , Button is Automatically  Disabled  
+
+                btn.innerHTML = " Load ... ";                              // Onclick the Button , Then Button Text was Replaced                    
+
+            const x = new XMLHttpRequest();
+            x.open("GET" , "https://fakestoreapi.com/products" , true);                 //Api Data is Adding 
+            x.send();
+
+            x.onreadystatechange = () => {
+                if(x.readyState === 4 && x.status === 200)
+                {
+                    const data = JSON.parse(x.responseText);                // convert the String into a Object 
+                    let txt = "";
+
+                    if(data.length > 0)                                 // Suppoose Api Data is Available , These method was working
+                    {
+
+                        data.forEach((item , index)=> {
+
+                            txt += "<div class='local'>";
+
+                                txt += "<img src='"+item.image+"' height= '150' width = ''/>" ;
+                                txt += "<h3>"+item.title+"</h3>";
+                                txt += "<p> Price : " +item.price +"</p>";
+                                txt += "<button>Add To Cart </button>"
+
+                            txt += "</div>" ; 
+
+                        })
+                    }
+                    else{
+                        txt += "Product's Not Found";               // Suppose API data is Not there , This was working 
+                    }
+
+                ele.innerHTML = txt;                                // Data Display on Browser 
+
+                load.style.display = "none"                     // Whenever Data will find loader image is hide 
+
+                    btn.removeAttribute("disabled");                    //  onclick the Button  whenever Data will find , Button is Automatically  Enabled 
+
+                    btn.innerHTML = " Loading Product "                                // Onclick the Button  , dAta will Find Then , Replace With Original Text 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

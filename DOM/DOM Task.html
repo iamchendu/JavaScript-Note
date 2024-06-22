@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide / SHow / Clear </title>
+</head>
+<body>
+    <h1> creating Hide , show , delete </h1>
+
+
+    <input type="text" name="" id="userName" class="user"/>
+    <button onclick="hideText()">Hide</button>
+    <button onclick="showText()">Show</button>
+    <button onclick="clearText()">Clear</button>
+<script>
+
+    var x = document.getElementById('userName');
+
+// How to add Html element in Javascript  ? 
+
+    x.placeholder = "Enter Password"   
+
+
+// Hide The Value 
+
+    function hideText(){
+        x.type = "password";
+    }
+ 
+// show the value 
+
+    function showText(){
+        x.type = "text"
+    }
+
+// Clear the value 
+
+    function clearText(){
+        x.value = "";
+    }
+</script>
+</body>
+</html>

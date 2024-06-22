@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div id="block"></div>
+
+    <script>
+
+// Example - 1 
+        // const x = new Promise(function(resolve ,reject){
+            
+        //     // let a = true ;                /// True value is Successfully show
+        //     let a = false                   /// false value is Error Show 
+
+        //     if(a)
+        //     {
+        //         resolve("Successfully Login")
+        //     }
+        //     else
+        //     {
+        //         reject("Error to Login")
+        //     }
+        // })
+        // console.log(x);
+
+
+// Example - 2
+
+    // const x = new Promise(function(resolve ,reject){
+            
+    //         let a = true ;                /// True value is Successfully show
+    //         // let a = false;                   /// false value is Error Show 
+
+    //         if(a)
+    //         {
+    //             resolve("Successfully Login")
+    //         }
+    //         else
+    //         {
+    //             reject("Error to Login")
+    //         }
+    //     })
+    
+    // //  How to conzume the value , Suppose Success give the value , Rejected give The Value .. 
+
+    //     x.then((result) => {
+    //         console.log(result);
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     });
+
+
+
+// Example - 3 
+//  one function to Other function is Executing 
+
+    const x = new Promise(function(item , out){
+            
+            let a = true ;                /// True value is Successfully show
+
+            // let a = false;                   /// false value is Error Show 
+
+            if(a)                                       // Success result Show
+            {
+                setTimeout(() => {
+                    item("Welcome My Galaxy")
+                }, 3000)                        // 3sec after delay the Time  
+            }
+            else                                        // Error result show 
+            {
+                out("Error to Login")
+            }
+        })
+    
+    //  How to conzume the value , Suppose Success result give the value , Reject result  give The Value .. 
+
+        x.then((result) => {
+            displayData(result);                        // function Executing
+            welcome()                                   // function Executing
+        }).catch((error) => {
+            console.log(error);                             // function Executing
+            displayData(error)                              // function Executing
+        })
+        function displayData(data){                             // function create
+            console.log(data);
+        }
+        function welcome(){                                     //function create 
+            console.log(" Hlo World ");
+        }
+    </script>
+</body>
+</html>

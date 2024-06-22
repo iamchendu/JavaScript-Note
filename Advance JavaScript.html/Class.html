@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<h1>Class is reusable block of code , 1 class with multiple logic </h1>
+<body>
+
+    <script>
+        
+// Scenario - 1 
+
+        class hello
+        {
+            
+        // variable Add
+
+            x = 200 ;
+            y = "Welcome Home";
+
+        // Function Add
+
+            getUser(){
+                console.log("ChandraSekhar");
+            }
+            getData(){
+                console.log("Baarish");
+            }
+        }
+
+// Class Memeber's Method Access By Using new  keyword , we can create an object 
+
+    // Example , Create a Object 
+
+            // const res = new hello()
+            // console.log(res);
+
+
+    // Example , call the property 
+
+            const res = new hello()
+            console.log(res.x);
+            console.log(res.y);;
+            res.getData();
+            res.getUser();
+
+
+    // Example , Class access and We can create object more at multiple time 
+
+            const item = new hello()
+            console.log(item.x);
+            console.log(item.y);;
+            item.getData();
+            item.getUser();
+
+
+// Scenario - 2 
+
+    // class sample
+    //     {
+    //         x = 100 ;
+    //         a = 200 ;
+    //         name = "Chandu";
+    //         add(){
+    //             return this.x + this.a;                 // This is a object 
+    //         }
+    //         welcome()
+    //         {
+    //             return "Good Morning "+name;              
+    //         }
+    //     }
+    //     const data = new sample()               // Class member called 
+
+    //     let b = data.add();                     // Property  method called
+    //     console.log(b);
+
+// Scenario - 3 
+//  One method into another method call with this keyword 
+class sample
+        {
+            x = 100 ;
+            a = 200 ;
+            name = "Chandu";
+            add(){
+                return this.x + this.a;
+            }
+            welcome()
+            {
+                return "Good Morning "+this.name;       
+            }
+            jhon()
+            {
+                console.log(this.welcome());                    // Another function called 
+            }
+        }
+        const data = new sample()               // Class member called 
+
+        let b = data.add();                     // Property  method called with this object 
+        console.log(b);
+
+        data.jhon()
+    </script>
+</body>
+</html>

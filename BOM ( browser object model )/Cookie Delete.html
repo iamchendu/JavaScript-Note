@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cookie Delete </title>
+</head>
+<body>
+
+    <button onclick="deleteCookie()"> Delete Cookie </button>
+
+    
+    <script>
+
+        // Example , How Can We Delete the peristent  Cookie before Exapiration Time ...
+
+
+        function deleteCookie(){
+            document.cookie = + " Country = ; expires=Sat, 25 jul 1970 12:00:00 UTC ; path=/; " ; 
+            document.cookie = + " Email= ; expires=Sat, 25 jul 1970 12:00:00 UTC ; path=/; " ; 
+            document.cookie = + " Id= ; expires=Sat, 25 jul 1970 12:00:00 UTC ; path=/; " ; 
+            document.cookie = + " Login= ; expires=Sat, 25 jul 1970 12:00:00 UTC ; path=/; " ; 
+        }
+    </script>
+</body>
+</html>

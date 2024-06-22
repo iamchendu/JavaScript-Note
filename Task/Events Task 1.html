@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data copy , hide , design  , show</title>
+    <style>
+        #block1,#block2{
+            width: 300px;
+            min-height: 80px;
+            height: auto;
+            border: 2px solid black;
+            font-size: 15px;
+        }
+        .container{
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <u><h1>Event's in JavaScript</h1></u>
+    <h2>How to copy the data and paste ..  </h2>
+    <div class="container">
+        <div id="block1">
+            <h1>This is first block</h1>
+            <p>Something Elese</p>
+        </div>
+
+        <div class="buttons">
+            <button onclick="copy1()"> copy </button>
+            <button onclick="copy2()"> copy </button>
+        </div>
+        <div id="block2">
+
+        </div>
+    </div>
+
+    <h2>How can work we hide the data and showed and Design ,  by using css and javscript</h2>
+
+    <div id="data">
+        Hello World ,, Good to Everyone
+    </div>
+    <button onclick="design()">Design</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="show()">Show</button>
+</body>
+<script>
+
+//  // First method copy the value one place to another 
+
+    let a = document.getElementById("block1");
+    let b = document.getElementById("block2");
+    
+    function copy1(){
+        a.innerHTML = b.innerHTML;
+        b.innerHTML = "10";
+    }
+    function copy2(){
+        b.innerHTML = a.innerHTML;
+        a.innerHTML = "30";
+    }
+//  // second method  button clicked value working showed  // 
+
+// Click to the data Designed
+
+    let x = document.getElementById("data");
+
+    function design(){
+        x.style.color = 'red';
+        x.style.fontSize = '40px';
+        x.style.padding = '20px'
+        x.style.width = '50%';
+        x.style.margin = ' 0 auto';
+        x.style.background = 'black';
+    }
+
+
+// Click to the data hide 
+
+    function hide(){
+        x.style.display = 'none';
+    }
+
+
+// Click to the data showed
+    function show(){
+        x.style.display = 'block';
+    }
+</script>
+</html>

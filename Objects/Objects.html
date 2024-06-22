@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <h1>Javascript Object</h1>
+</body>
+<script>
+
+// Example-1 in this  object property and value how it work's and how to call all value's at one time
+    const x = {
+        userName : "Chendu",
+        email : "chendugadu143@gmail.com",
+        phone : "7438903993",
+        pin : 761002 ,
+        city : "Hyd"
+    }
+    console.log(x);
+
+// Example-2 in this object property and value how to call with Mulltiple value's by choosing
+    const y = {
+        userName : "Cs",
+        email : "chendugadu143@gmail.com",
+        phone : "7438903993",
+        pin : 761002 ,
+        city : "Hyd"
+    }
+    console.log(y.userName);
+    console.log(y.city);
+    console.log(y.pin);
+
+
+// Example-3  in this  object with method's and value with return statement
+
+    const r = {
+        welcome:function(){
+            return " Welcome to Ram"
+        },
+        from: () =>{
+            return " Hyderabadh T"
+        },
+        pin:function(){
+            return "982972"
+        }
+    };
+    console.log(r.welcome());
+    console.log(r.from());
+    console.log(r.pin());
+
+
+// How can we access the property of an object into a object methods ? 
+
+        //  this keyword  // object name 
+
+    // example 
+        
+         const z = {
+                userName : "Chendu",
+                email : "chendugadu143@gmail.com",
+                phone : "7438903993",
+                pin : 761002 ,
+                city : "Hyd",
+                fullname: () => {
+                    return this.userName+" "+this.pin;
+                    // return z.userName+" "+z.pin;
+                },
+                from: () =>{
+                    return " Hyderabadh "
+                },
+                pinC: function(){
+                    return "hlo 982972"
+                }
+            };
+            console.log(z.fullname());
+            console.log(z.city);
+            console.log(z.pinC());
+
+
+
+
+//  Creating object with empty , After creating empty object with, how to push empty object .. process
+
+//  Example of empty Object , In this object same property name with different value ..
+
+    const user = {};
+    user.firstname = "CS";
+    user['lastname'] = 'Tech';
+    user.email = "chendua172@gmail.com";
+    console.log(user);
+
+
+// Another example
+
+    const obj = {};
+    obj.name = "Chendu";
+    obj.email = "chendua172@gmail.com";
+    obj.pin = "9283";
+    console.log(obj);
+
+
+
+// How can copy more object's calling at one time , by using with  spread operator ( ... ) 
+
+// example-1
+
+    // const data = { name : "chendu" , email : "chendua172@gmail.com" , pin : "99"};
+    // const bio = { office : "ifsoys" , drop : "3"};
+    
+    // const a = {...data,...bio};
+    // console.log(a);
+
+
+//example - 2  In object same property name with different value .. How it Works ? 
+
+// Spread Operator
+
+    // var data = { name : "chendu" , email : "chendua172@gmail.com" , pin : "99"};
+    // const bio = { name : "OGGY" , office : "ifsoys" , drop : "3"};
+    
+    // const a = {...data,...bio};
+    // console.log(a); 
+
+    
+</script>
+</html>

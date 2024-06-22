@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time </title>
+</head>
+<body>
+
+<!-- TASK - 1  -->
+
+    <!-- <input type="date" name="" id="date" placeholder="DOB">
+    <button onclick="getDate()">Save</button> -->
+
+
+    <div id="info"></div>
+<script>
+
+// Example 
+
+        // const d = new Date();    // It was show (date,time,month,year) ( India Standard Time Showed )
+
+        // document.write(d);
+
+
+//      Example  
+
+        // const e = new Date();
+
+        // console.log(" Date - Time - "+e.toLocaleString());        //  Date and Time  Showed 
+
+        // console.log(" Time - "+e.toTimeString());          // Time Only Showed 
+
+        // console.log(" Date - "+e.toLocaleDateString());            //   Date Showed 
+
+        // console.log("Date - "+e.getDate());               //  Today Date Showed 
+
+        // console.log(" Millisecond - "+e.getTime());               // Current Time with millisecond since january 1 , 1970 to showed 
+
+        // console.log(" Hour - "+e.getHours());               // Current Hour Showed 0-24
+
+        // console.log(" Minute - "+e.getMinutes());               //   Current Minute Showed 
+
+        // console.log(" Month - "+e.getMonth());               //     Current Month Showed 
+
+        // console.log(" MilliSecond - "+e.getMilliseconds());               //  Current millisecond Showing
+
+        // console.log(" Year - "+e.getFullYear());               //  Current Year Showed 
+
+
+// Example TimeZone Identifies
+
+//  Different Country Checking Time Zone 
+
+        // const x = new Date();
+        
+        // let india = x.toLocaleString("en-US", {timeZone: 'Asia/kolkata' });
+        // let los = x.toLocaleString("en-US", {timeZone: 'America/Los_angeles '});
+        // let newYork= x.toLocaleString("en-US" , {timeZone: ' America / New_york  '});
+        // let dubai = x.toLocaleString("en-US", {timeZone: 'Asia/Dubai' });
+        // let kar = x.toLocaleString("en-US" , {timeZone: 'Asia/Karachi '});
+        // let sing= x.toLocaleString("en-US" , {timeZone: 'Asia/Singapore '});
+
+        // console.log(india);
+        // console.log(los);
+        // console.log(newYork);
+        // console.log(dubai);
+        // console.log(kar);
+        // console.log(sing);
+
+
+
+// TASK  - 1 
+
+    // Whatever date value add that submit  
+
+    // function getDate(){
+    //     var x = document.getElementById("date").value;
+    //     const d = new Date(x);
+
+    //     let a = d.getFullYear()+ "-"+(d.getMonth()+1) + " - "+d.getDate();
+
+    //     alert(a);
+    // }
+
+
+// Task - 2 
+
+        // const dob = "01-15-2024"                 // date Changing here 
+        // const x = new Date(dob);
+
+        // const weeks = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        // const months = [
+        // 'January', 'February', 'March', 'April', 'May', 'June', 'July',
+        // 'August', 'September', 'October', 'November', 'December'
+        // ];
+
+        // let a = weeks[x.getDay()]+" " + x.getDate() + " " +months[x.getMonth()]+" "+x.getFullYear();
+        // alert(a);
+        
+
+// Task - 3             // Current timing 
+
+        // const x = new Date(); 
+
+        // const ele = document.getElementById('info')
+        // let hour = x.getHours() < 10 ? "0"+x.getHours() : x.getHours();
+        // let minute = x.getMinutes() < 10 ? "0"+x.getMinutes(): x.getMinutes();
+        // let second = x.getSeconds() < 10 ? "0"+x.getSeconds() : x.getSeconds();
+        //         // How can we add leading zero  
+
+        // let a = hour+ ":"+minute +":" + second;
+
+        // ele.innerHTML = a;
+
+
+    // Example 
+
+    // Suppose Timing Extra Adding want , Then This Process
+    
+
+                // const x = new Date(); 
+
+
+                //     // x.setMinutes (x.getMinutes() + 30);                 // Minute Extra Adding 
+                //     // x.setHours (x.getHours() + 3);                          // Hour Extra Adding 
+
+
+                // let hour = x.getHours() < 10 ? "0"+x.getHours() : x.getHours();
+                // let minute = x.getMinutes() < 10 ? "0"+x.getMinutes(): x.getMinutes();
+                // let second = x.getSeconds() < 10 ? "0"+x.getSeconds() : x.getSeconds();
+                //         // How can we add leading zero  
+
+                // let a = hour+ ":"+minute +":" + second;
+                // console.log(a)
+
+
+
+// Task- 3
+    
+    // Timing Continue run on Browser  
+
+
+    const ele = document.getElementById('info') 
+
+    function nowTime()
+    {
+            const x = new Date();
+                let hour = x.getHours() < 10 ? "0"+x.getHours() : x.getHours();
+                let minute = x.getMinutes() < 10 ? "0"+x.getMinutes(): x.getMinutes();
+                let second = x.getSeconds() < 10 ? "0"+x.getSeconds() : x.getSeconds();
+                let a = hour+ ":"+minute +":" + second;
+        ele.innerHTML = a;
+    }
+    nowTime();
+
+    setInterval(nowTime, 1000)  ;
+
+</script>
+</body>
+</html>

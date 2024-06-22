@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css with js </title>
+</head>
+<body>
+    <h1>How can we add css style by using javscript</h1>
+
+    <!--  -->
+    <div id="title"> Hello World </div>
+</body>
+<script>
+    var x = document.getElementById("title");
+    x.style.color = 'red';
+    x.style.background = "yellow";
+    x.style.fontSize = '50px';
+    x.style.textAlign = 'center'
+    x.style.padding = '20px '
+    // 
+
+
+    // 2nd process
+
+    x.style.cssText = "margin:10px; border : 2px solid black ; "
+    
+    // 
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table's</title>
+    <style>
+        div{
+            width: 10%;
+            border: 2px solid red;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<!-- 1st process  -->
+    <h1>Print the Table's </h1>
+    <h1> Print the 2 to 20 table's , every table 20 iteration     </h1>
+    <div></div>
+    <script>
+
+ // Example - 1 
+
+// 1st process
+        var a = prompt("Enter the Number ");
+        for(let n = 1 ; n <= 10 ; n++){
+            document.write("<div>");
+                document.write(a + ' x ' + n + " = " + a*n);
+            document.write("</div>");
+        }
+
+// 2nd process
+
+    // var a = 23;
+    // for(k = 1 ; k <= 10 ; k++){
+    //     document.write(a+" * " + k + " = " + k*a + "<br/>");
+    // }
+
+
+// Example - 3 
+
+// Print the 2 to 20 table's , every table 20 iteration ...
+
+    for(let a = 2 ; a <= 20 ; a++){
+        var table = a;
+        for(let i = 1 ; i <= 10 ; i++){
+            document.write(table + " x " + i + " = " + table*i + "</br>")
+        }
+        document.write("========= </br>");
+    }
+
+
+// Example - 4 
+
+// How can be iterate the array Value's  with looping method ?
+
+// like increased more value and decreased value , how to put the array with short and property ..  // 
+
+
+    // 1st example  of more increased value 
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3','Car 4','Car5','Car 6','Car 7','Car 8'];
+        
+        // for(let i = 0 ; i < b.length ; i++){
+        //     a.innerHTML += "<h1> Hello " +b[i]+" </h1>";
+        // }
+    
+
+    // 2nd example  of low decreased value 
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3'];
+        
+        // for(let i = 0 ; i < b.length ; i++){
+        //     a.innerHTML += "<h1> Hii  " +b[i]+" </h1>";
+        // }
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window Timing function </title>
+</head>
+<body>
+    
+    <button id="buy">Buy Now </button>
+
+    <div id="info"></div>
+    <button onclick="timeStop()">Stop</button>
+    <script>
+
+//  setTimeout()  // clearTimout()
+
+// Example 
+
+        // const x = setTimeout(myMsg,5000);               // In The Specifice Time is complete ITem value will Be calling 
+
+        // function myMsg(){
+        //     document.getElementById("info").innerHTML = " HappY BirthDay " ; 
+        // }
+
+        // function timeStop(){
+        //     clearTimeout(x);                        // In the Specific Time is not complete , If Item Click value will be not Calling 
+        // }
+
+
+
+//  setTimeout()
+
+// Example 
+
+//  In the Item will Disabled , After Specific Time is Completed Item will be Enabled 
+
+        // var x = document.getElementById("buy") ; 
+
+        // x.disabled = true ;                 // Item will be Disabled 
+
+        // setTimeout(() => {
+        //     x.disabled = false ; 
+        // }, 10000);                          // After 10sec Item will be Enabled 
+
+
+
+// Example
+
+// Disable time item click value will be not calling , But in any Item After Specific Time is Completed then value be called 
+
+        // var x = document.getElementById("buy") ; 
+
+        // x.disabled = true ;                 // Item will be Disabled 
+
+        // setTimeout(() => {
+        //     x.disabled = false ; 
+        //     x.addEventListener("click", () => {                     // function is Attaching 
+        //         alert(" Hlo World ");
+        //     })
+        // }, 5000);                          // After 5sec Item click value will be called 
+
+
+
+//  Example 
+
+//  But in any Item After Specific Time is Completed then value be called 
+
+        // var x = document.getElementById("buy") ; 
+        // setTimeout(() => {
+        //     x.addEventListener("click", () => {                     // function is Attaching 
+        //         alert(" Hlo World ");
+        //     })
+        // }, 5000);                            // After 5sec Item click value will be called 
+
+
+
+
+    </script> 
+</body>
+</html>

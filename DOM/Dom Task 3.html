@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Function </title>
+    <style>
+        #row{
+            width: 30%;
+            height: 150px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <u>    <h1> ID , innerHTML , innerTEXT , class </h1>    </u>
+<!-- scenario - 1  -->
+
+    <div id="col">CS Tech </div>
+
+
+    <hr>
+    <br>
+
+<!-- Scenario - 2  -->
+
+    <button onclick="add()">Click </button>
+    <br> 
+    <br>
+    <div id="row">
+
+        <p> Narutho </p>
+        <p> KIM </p>
+
+    </div>
+</body>
+<script>
+
+ // How to id element called in js
+
+//  document.getElementById("")
+
+// innerHTML and innerText Difference 
+
+
+// Scenario - 1 
+
+    // Example of  parent with child element and content showed  on console 
+
+
+        // let x = document.getElementById('col');
+        // console.log(x);
+
+
+    // Example of inside value showed 
+
+
+        // var a = document.getElementById('col').innerHTML ;
+        // alert(a)
+
+
+    // Example of value replaced
+
+
+        // document.getElementById("col").innerHTML = " Hello Good morning";
+
+
+
+// Scenario - 2 
+
+    // Example of onclick the element How to value add and print the browser 
+
+    // example - 1 
+
+
+        // function add(){
+        //     let x = document.getElementById('row');
+        //     x.innerHTML = "Namaste ,  Hello Bro ";
+        // }
+
+
+    // example - 2  
+
+        // let a = document.getElementById('row');
+        // function add(){
+        //     a.innerHTML = "Gian c ";
+        // }
+
+
+    // example - 3 How can call more value added  with by onclick
+
+        // let a = document.getElementById('row');
+        // function add(){
+        //     a.innerHTML += " Hello  ";
+        //     a.innerHTML += " World ";
+        // }
+
+
+// Scenario - 3 
+
+ // difference between innerText and innerHtml 
+
+    //  example -1  with innerText
+
+        // let a = document.getElementById('row');
+        //     function add(){
+        //         a.innerText += " Hello  ";
+        //         a.innerText += " World ";
+        //     }
+
+    // example - 2  with innerHtml
+    
+    // let a = document.getElementById('row');
+    //     function add(){
+    //         alert(a.innerHTML);
+    //     }
+
+
+    // example - 3  with innerText
+
+            // let a = document.getElementById('row');
+            //     function add(){
+            //         alert(a.innerText);
+            //     }
+
+</script>
+</html>

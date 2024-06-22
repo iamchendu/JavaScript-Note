@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array  </title>
+</head>
+<body>
+    <h1>ForEach()</h1>
+    <div id="info"></div>
+</body>
+<script>
+
+// forEach  
+
+
+    const subject = ["Html","CSS","JS","JAVA","Atml","BOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","DODE","MCQ","Btml"];
+
+// Example -1   The way of Iterating value 
+
+    var x = document.getElementById('info');
+    subject.forEach(function(a,b,c){
+
+        console.log(a);   // parameter - 1  // Hold' each and every item of an array value 
+        // console.log(b);   // parameter - 2  // Hold's index number of each and every value 
+        // console.log(c);   // parameter - 3  // Hold's the Current array of iteratiing 
+
+    });
+
+// Example -2  Display the value on browser 
+
+    // var x = document.getElementById('info');
+    // let data = "";
+    // subject.forEach(function(a,b,c){
+    //     data += "<p>"+a+"</p>";
+    // });
+    // x.innerHTML = data;
+
+
+// Example -3 ,  returning statement used , it was not worked  , Undefiend showed 
+
+    // const data = subject.forEach(function(a,b,c){
+    //     return a ;
+    // });
+    // console.log(data);   // undefiend showed 
+
+

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+</head>
+<body>
+
+<!-- <p id="para">Helo One </p>
+<p id="para"> Hello </p>
+<h2 id="para">Helo Two </h2>
+<p id="para">Helo Four </p>
+<h2 id="para">Helo Three</h2> -->
+
+<br>
+
+<!-- <p class="para">Helo One </p>
+<p class="para"> Hello </p>
+<h2 class="para">Helo Two </h2>
+<p class="para">Helo Four </p>
+<h2 class="para">Helo Three</h2> -->
+
+
+
+<div class="main"></div>
+
+<script>
+
+//  Id ()
+
+//  ID name will be connecting
+
+// Example 
+
+    // same id with different value, display all in the browser ,  but one element Getting not all .  
+
+    // How to Html Element ID Selecting On JAVASCript   
+
+
+        // var x = document.getElementById('para');
+        // console.log(x)
+
+
+// Example , value will be Replaceable  
+
+    // document.getElementById('para').innerHTML = 'DADA';
+
+
+
+
+
+
+
+
+
+
+
+
+//  QuerySelectorAll ()
+
+//  ID and Class name will be connecting
+
+
+// Example 
+
+    // same id with different value, display all in the browser ,  but all the  element Getting  , But QuerySelector need the selector.
+
+        // var x = document.querySelectorAll('#para');
+        // console.log(x)
+
+// Example 
+
+    //    same ID with Different Element , Then selecting any same Element calling      , using (  #  and . )
+
+
+        //  var x = document.querySelectorAll('h2#para');
+        //  console.log(x)
+
+    
+    //  
+
+    
+        //  var x = document.querySelectorAll("h2.para");
+        //  console.log(x)
+
+
+
+// EXample 
+
+    // Manuplating the Dom Element's 
+
+        //  var x = document.querySelectorAll('#para');
+        //  for(let item of x){
+        //     item.style.color = "red"
+        //  }
+
+
+// Example 
+
+    //  same id name and element with  How to Choosing the any one element  
+
+        // var x = document.querySelectorAll("p:nth-child(2)");
+        //     for(let item of x){
+        //         item.style.color = "red"
+        //     }
+
+
+// Example  
+
+    //  (Even  /  odd)   Element Selecting  process
+
+    //  Even Selecting 
+
+        // var x = document.querySelectorAll("p:nth-child(even)");
+        //  for(let item of x){
+        //     item.style.color = "red"
+        //  }
+
+    //  Odd Selecting 
+
+        // var x = document.querySelectorAll("h2:nth-child(odd)");
+        //     for(let item of x){
+        //         item.style.color = "red"
+        //     }
+
+
+// Example 
+
+    // ALL the Element Selecting , using universal Selector
+
+        // var x = document.querySelectorAll("*");
+        //     for(let item of x){
+        //         item.style.color = "red"
+        //     }
+
+
+
+
+
+
+
+
+
+
+
+//  getElementByClassName()
+
+//  Class name will be connecting
+
+// Example 
+
+    // var x = document.getElementsByClassName('para');
+    // console.log(x);
+
+
+// Example 
+
+// Same Class name with Differene element How To selecting in class element 
+
+    // var a = document.getElementsByClassName('para')[0].innerHTML ;
+    // var b = document.getElementsByClassName('para')[4].innerHTML ;
+    // var c = document.getElementsByClassName('para')[3].innerHTML ;
+
+    // alert(c);
+    // alert(b);
+    // alert(a);
+
+
+// Example  
+
+//  value will be Replaceable  , By Selecting Element's 
+
+    // document.getElementsByClassName('para')[0].innerHTML = "ToDAy Why ?";
+
+
+
+// Example 
+// How to attached a function in class element 
+
+    // var x = document.getElementsByClassName('para');
+    // for(let item of x){
+
+//  Element will modify with css in JavaScript 
+
+        // item.style.color = "red";
+        // item.style.backgroundColor = "black";
+        // item.style.padding = "10px";
+        // item.style.color = "red";
+
+
+    // Example 
+    //  Text will be replace with every element 
+
+        // item.innerHTML = "Click To Me"
+
+
+    // Example 
+
+    //  To click the a element , Element will be Hide , This method user for current  
+
+        // item.onclick = function(){
+        //     this.style.display = "none";
+        // }
+
+
+    // Another Process , To Working with CSS ,
+    
+        // item.onmouseover = function(){
+        //     this.style.backgroundColor = "yellowgreen";
+        // }
+        // item.onmouseout = function(){
+        //     this.style.backgroundColor = "black";
+        // }
+
+    // }
+
+
+
+
+
+
+
+
+
+
+
+// getElementByTagName()
+
+//  Only Tag Element Selecting 
+
+    // var x = document.getElementsByTagName('h2');
+    // console.log(x);
+
+
+
+
+
+
+
+
+// createElement();
+
+// HTml  Element Creating 
+
+// Example 
+
+    // var x = document.createElement('h2');
+    // var a = document.createElement('div');
+    // console.log(x);
+    // console.log(a);
+
+
+
+
+//  createTextNode()                               // Text Will be Creating 
+//    appendChild()                              // It Was element inside Creating with value 
+
+// Example 
+
+    // var x = document.createElement('h2');
+    // var a = document.createTextNode(" HEllo Pink BABY ");               
+
+    // x.appendChild(a);          
+
+    // console.log(x);
+
+
+
+
+//      remove()                                   //   Element Will be Removed 
+
+// Example 
+
+    // var ele = document.querySelectorAll(".para");
+
+    // for(item of ele){
+    //     item.onclick = function(){
+    //         this.remove()
+    //     }
+    // }
+
+
+
+
+
+
+
+//   setAttribute()
+
+// Example 
+// Adding html Attibute
+
+        // var x = document.querySelectorAll(".para");
+
+        // for (item of x){
+        //     item.setAttribute("type","title")            // Adding attribute  
+        // }
+
+
+
+
+
+
+        
+//   querySelector() 
+
+//  It was Needs inside Selector with Element name 
+
+// Example 
+
+//  Modifying with CSS Style  
+
+
+
+    // var x = document.querySelector(".main")
+    // x.style.cssText = " height:100px;  width:300px; border:3px solid red; backgroundColor:red; text-align:center; font-Size:50px;"
+
+
+
+
+</script>
+
+
+</body>
+</html>

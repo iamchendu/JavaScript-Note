@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object </title>
+</head>
+<body>
+
+    <button onclick="winOpen()">Open</button>
+    <button onclick="winClose()">Close</button>
+    <button onclick="winResize()">RESizE</button>
+
+
+    <h4>  _blank   it was open Separate tab hold in current page      </h4>
+    <h4>  _self   URL replace the Current page  </h4>
+</body>
+<script>
+
+
+// open()
+
+// How can be open a Web site , by click button tag 
+
+    //It was Open in the Separate Browser 
+
+        // function winOpen(){
+
+        //      window.open("http://google.com" , "height = 400 , width = 300 , top = 50 , left = 300")
+        
+         // }
+
+
+
+    // Example  
+
+    //         _blank   
+
+        // function winOpen(){
+
+        //     window.open("http://google.com","_blank" , "height = 400 , width = 300 , top = 50 , left = 300")
+
+        // }
+
+
+
+
+    // Example     
+
+    //      _self 
+
+        // function winOpen(){
+
+        //         window.open("http://google.com","_self" , "height = 400 , width = 300 , top = 50 , left = 300")
+        //     }
+
+
+
+
+// close()
+
+//  How can be close a website by using Button tag  
+
+
+    // var a ;
+
+    //     function winOpen(){
+
+    //        a =  window.open("http://google.com","_blank" , "height = 400 , width = 300 , top = 50 , left = 300")
+
+    //     }
+
+
+    //     function winClose(){
+
+    //         a.close()
+    //     }
+
+
+
+
+
+// Example 
+
+
+//  How can be resize the window 
+
+    var a ;
+
+    function winOpen(){
+
+    a =  window.open("http://w3schools.com",  "height = 400 , width = 300 , top = 50 , left = 300")
+
+    }
+
+
+    function winClose(){
+
+        a.close()
+    }
+
+
+    function winResize(){
+
+        a.reSizeTo(500,500);
+    }
+</script>
+</html>

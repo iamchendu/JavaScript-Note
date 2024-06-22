@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <!-- IN JAvaScript How many Subject's I have that in Array , How To Display  ? The All are Subject's inside HtML Select element -->
+
+    <label for="">Select Subject's</label>
+
+    <select id="subject">
+
+    </select>
+    <script>
+        const box = ["Html" , " CSS" , 'Bootstrap', 'java', 'lcew', 'lds', 'iiii', 'ooo'];
+        var a = document.getElementById("subject");
+
+// Example - 1 All Value Show on Display with Short and property 
+
+        for (let item of box){
+
+                // concatenation with value  ( += )
+                
+            a.innerHTML += "<option>"+item+"</option>";
+        }
+
+ // Example - 2 Value Show on Display 
+
+            // concatenation with value  ( += )
+
+        // a.innerHTML += "<option>"+box[0]+"</option>"; 
+        // a.innerHTML += "<option>"+box[1]+"</option>"
+        // a.innerHTML += "<option>"+box[2]+"</option>"
+        // a.innerHTML += "<option>"+box[3]+"</option>"
+        // a.innerHTML += "<option>"+box[4]+"</option>"
+
+// In javaScript Backend server Data, How to Display The Browser ?  The way woring with Html ... 
+
+    </script>
+</body>
+</html>

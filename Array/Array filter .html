@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array </title>
+</head>
+<body>
+    <div id="info"></div>
+</body>
+<script>
+
+// Scenario - 1 
+
+    // const data = [
+    //             { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "23" , salary : '10000'} ,
+    //             { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83", salary : '30000'} ,
+    //             { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "58", salary : '40000'} ,
+    //             { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93", salary : '50000'} ,
+    //             { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02", salary : '60000'}
+    //     ];
+
+    // const x = data.filter((item,index) => {
+
+// Example 
+
+        // return item;                         // Iterate the Array Object value ;
+
+
+// Example 
+
+        // return item.salary <= 35000;                 // It was less salary collected , which value is higher and lower we can check this ... 
+    
+        
+// Example 
+
+        // return (item.pin == "93" || item.pin == "02") && item.salary >= 55000;                   /// It was compare the value , which value was higher and lower we can check this ...
+
+    // });
+
+    // console.log(x);
+
+
+
+// Scenario - 2 
+
+    // const data = [
+    //             { ID : 1 , name  : "RAM" , pin : ["23" , "55"] , salary : '10000'} ,
+    //             { ID : 2 , name  : "MAHI" ,  pin : "83", salary : '30000'} ,
+    //             { ID : 3 , name  : "KESA" ,  pin : "58", salary : '40000'} ,
+    //             { ID : 4 , name  : "LISA" ,  pin : ["93" , "23"], salary : '50000'} ,
+    //             { ID : 5 , name  : "HENI" ,  pin : "02", salary : '60000'}
+    //     ];
+
+    // console.table(    // console table was created   
+
+// Example 
+
+        // data.filter(x => x.salary < 45000)         // It was show the less value 
+
+// Example  , In this method array object inside array property , check the similar value 
+
+        // data.filter(x => x.pin.includes("23"))   
+
+    // )
+    
+
+
+// Scenario - 3 
+
+        // const x = [ 10 , 20 , 30 , 40 ,10 , 40 , 30 ,50 ,90 , 70 , 40 , 100];
+
+        // const data = x.filter((item , index) => {
+
+// Example , In this method Removed a Duplicate value's in array Object 
+
+        //     // return x.indexOf(item) === index;
+
+
+            
+        // })
+
+        // console.log(data);
+</script>
+</html>

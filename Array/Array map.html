@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array </title>
+</head>
+<body>
+    <h1>map()</h1>
+    <div id="info"></div>
+</body>
+<script>
+
+
+// map()
+
+// const subject = ["Html","CSS","JS","JAVA","ATM","BOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","DODE","MCQ"];
+
+// const arr = [ 10 , 20 , 30 , 40 , 50 , 60];
+
+
+// Example -1   
+
+// The way of Iterating value 
+
+    // subject.map(function(a,b,c){
+
+    //     console.log(a);   // parameter - 1  // Hold' each and every item of an array value 
+    //     console.log(b);   // parameter - 2  // Hold's index number of each and every value 
+    //     console.log(c);   // parameter - 3  // Hold's the Current array of iteratiing 
+
+    // });
+
+
+// Example 2 
+
+//   returning statement used , it was worked and returning the value of Array and it create's a new array 
+
+
+    // const data = subject.map(function(a,b,c){
+    //     return " Hello " ;
+    // });
+    // console.log(data);   // return the value it's create new array 
+
+
+    // Example , whatever you add value that will be showed ... 
+
+        // const data = subject.map(function(a,b,c){
+        //     return 0 ;
+        // });
+        // console.log(data);   // return the value it's create new array 
+
+
+    // Example , whatever you call the array that value will be showed ... 
+
+        // const data = subject.map(function(a,b,c){
+        //     return a ;
+        // });
+        // console.log(data);   // return the value 
+
+
+    // Example ,array returning  ... 
+
+            // const data = subject.map(function(a,b,c){
+            //     return [] ;
+            // });
+            // console.log(data);   // return the array
+
+
+    // Example , Object retuning ... 
+
+            // var x = document.getElementById('info');
+            // const data = subject.map(function(a,b,c){
+            //     return {} ;
+            // });
+            // console.log(data);   // return the array object 
+
+
+    // Example , Whatever data in the Array's How to converting , and  modify with whole data and property ... 
+
+            // const data = subject.map(function(a,b,c){
+            //     return { Id : b+1 , Course : a } ;
+            // });
+            // console.log(data);   // return the array object and value or property will modify with whole data ...
+
+
+
+    // EXample , change the  whole data will be uppercase either lowercase 
+
+            //     const data = subject.map(function(a,b,c){
+
+            //         // return a.toUpperCase() ;
+            //         return a.toLowerCase();
+
+            //     });
+            //     console.log(data);  /// Modify the array value's
+            
+            
+    // Example , All array string value will be not changed , choose any one string value will be changed and modify ..  
+
+                // const data = subject.map(function(a,b,c){
+                //     if(a == "JAVA"){
+                //         return a.toLowerCase();   /// choose the retun one value will be modify 
+                //     }
+                //     return a ;  // return the array actully value 
+                // });
+                // console.log(data);
+
+
+    // Example , All array string value will be not changed , choose any one string value will be changed and modify ..  
+
+                // const data = arr.map(function(a,b,c){
+                //     if(a === 40){
+                //         return a + 30   /// choose the retun one value will be modify 
+                //     }
+                //     return a ;  // return the array actully value 
+                // });
+                // console.log(data);
+
+
+
+    // Example , All array numerical value will be modify  ,  .. How to concating the numerical value's 
+
+                // const data = arr.map((a,b,c) => {
+                //     return a+5; /// All array numerical value will be concating ... 
+                // });
+                // console.log(data); 
+
+
+    // Example , in map()  method calculation we can do  ... 
+
+                // const data = arr.map((a,b,c) => {
+                //     return a + a * 15 / 100 ; 
+                // });
+                // console.log(data); 
+
+
+
+// Example - 3 
+
+// If the data is the form a array of object , How to Iterate ? 
+
+    // const subject = ["Html","CSS","JS","JAVA","ATM","BOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","DODE","MCQ"];
+
+    // var x = document.getElementById('info');
+
+        const data = [
+                { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "23" , salary : '10000'} ,
+                { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83", salary : '30000'} ,
+                { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "58", salary : '40000'} ,
+                { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93", salary : '50000'} ,
+                { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02", salary : '60000'}
+        ];
+
+    const dataCall = data.map((a,b) => {
+
+
+        // console.log(data); // Hold's  the  all Array in iterating array 
+
+
+
+    // Example ,  returning the all array object's value 
+
+        // return a ;   
+
+
+    // Example , returning the all array object's value 
+
+        // return{...a};   
+
+
+
+    // Example , Many of Array object's ,  choosing a array object returning the any one string value  ...
+    
+        // return {userName : a.name , salary : a.salary};
+
+
+    // Example , Many of Array object's ,  choosing any one array property value 
+    
+        return a.salary;
+
+
+
+    // Example   // Array data will be modify  
+
+        // return {email :"cstech@gmail.com" , salary : "30000"};
+
+
+    // Example   // Remaining the all array object value ,  and modify the array data  
+
+        // return {...a, email :"cstech@gmail.com" , salary : "30000"};
+
+
+
+    // Example   // Array object item will be calculated and modify the string value and iterating 
+
+    //     return { ...a ,  Salary : a.salary + a.salary * 25/ 100};
+
+    });
+
+
+
+    console.log(dataCall); 
+
+    // The way of iterating data on javaScript map() method ..
+</script>
+</html>

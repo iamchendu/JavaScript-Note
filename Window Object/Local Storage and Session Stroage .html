@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    <h1>Local Storage </h1>
+
+    <button onclick="createStroge()">Created local </button>
+
+
+
+    <h1> Session Storage  </h1>
+
+    <button onclick="createdSession()">Created session </button>
+    <script>
+
+// localStorage()
+
+        //  Create a localStorage 
+
+            function createStroge(){
+
+                localStorage.setItem("name" , "CS"),
+                localStorage.setItem("city" , "Hydrabadh");
+                localStorage.setItem("pin" , 3411);
+                localStorage.setItem("email" , "cs@gmail.com");
+
+                alert(" local created .. .")
+            }
+
+
+
+// sessionStorage()
+
+        // Created a sessionStorage 
+
+            function createdSession(){
+
+                sessionStorage.setItem("sub","JAVA");
+                sessionStorage.setItem("batch",21);
+                sessionStorage.setItem("love","MOM");
+
+                alert("session created ")
+            }
+    </script>
+</body>
+</html>

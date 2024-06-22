@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or delete </title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            margin: 0px auto;
+            background: #efefef;
+            padding: 10px;
+            align-items: start;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            padding: 10px 0px ;
+            list-style-type: none;
+            border-bottom: 2px solid red;
+            width: 30%; 
+        }
+        .block{
+            background-color: #eee;
+            padding: 20px;
+            flex: 45%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red; font-size: 100px;"> Crud Operation's </h1>
+    <div id="container">
+        <div class="block">
+            <form action="" onsubmit="addsubject()">
+                <label for=""> Add Subject </label>
+                <input type="text" name="" id="subject">
+                <input type="submit" name="" value="Add" id="">
+            </form>
+        </div>
+        <div class="block">
+            <div id="subjectlist"></div>
+        </div>
+    </div>
+</body>
+<script> 
+    const sub = ['Html' , 'Css' , ' Java'];
+    var x = document.getElementById('subjectlist');
+    function addsubject(){
+        event.preventDefault();
+        let data = document.getElementById("subject");
+        if(data.value !== ""){
+
+            // value will be added 
+            sub.push(data.value);
+            displaysubject(sub)
+        }else{
+
+            // value will be not write then button clicked then alert  work 
+            alert('Please Enter Subject');
+        }
+    }
+    function displaysubject(){
+        let txt = "";
+        if(sub.length > 0){
+            txt += "<ul>";
+            for(let item in sub){ 
+                txt += "<li>"+sub[item]+ " - <button onclick = 'removeItem("+item+")' >x</button> </li>" ; 
+            }
+            txt += "</ul>"
+        }else{
+            txt += "<p>Subject's Not Found </p>"
+        }
+        x.innerHTML = txt;
+    }
+    displaysubject(sub)
+
+    function removeItem(index){
+        sub.splice(index , 1)   //  1 it was one item remove , suppose 2 then two item's removed .... 
+        displaysubject(sub);
+    }
+</script>
+</html>

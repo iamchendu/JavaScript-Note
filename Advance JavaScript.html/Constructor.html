@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <div id="block"></div>
+
+    <script>
+
+// // Scenario - 1 
+
+//         class Employe
+//         {
+//             add()
+//             {
+//                 console.log("Add Calling");
+//             }
+//             view()
+//             {
+//                 console.log("View Calling ");
+//             }
+//             constructor(){                              // Constructor where will be adding but first priority is constructor method 
+//                 alert("Constructor calling ");
+//             }
+//         }
+    
+//     // Example 
+
+//         // const x = new Employe();                // CONSTRUCTOR is first called 
+
+
+//     // Example  , Calling all Data Manually 
+
+//         const res = new Employe();                  // // CONSTRUCTOR is first called then all data call be manually 
+//         res.add();
+//         res.view();
+
+
+
+// Scenario - 2
+
+// Whatever Logic intialising inside of constructor is available for each and every method Automitically 
+
+    class Employe
+        {
+            x;
+            add()
+            {
+                console.log("Add Calling"+this.x);
+            }
+            view()
+            {
+                console.log("View Calling "+this.state);              
+            }
+            constructor(){                                     
+                this.x = " Hlo Brother"             // This keyword add a property value 
+                this.state = " Hydrabadh"                       // This keyword create with property and value
+                console.log("Constructor calling ");
+            }
+        }
+    
+    // Example 
+
+        // const x = new Employe();                // CONSTRUCTOR is first called 
+
+
+    // Example  , Calling all Data Manually 
+
+        const res = new Employe();                  // // CONSTRUCTOR is first called then all data call be manually 
+        res.add();
+        res.view();
+
+    </script>
+</body>
+</html>

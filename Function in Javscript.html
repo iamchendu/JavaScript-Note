@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Function's </title>
+</head>
+<body>
+    <h1>Function's </h1>
+    <h1>Arrow Function's</h1>
+    <h1> Return Statement </h1>
+
+</body>
+<script>
+
+//  Function 
+
+ // Example-1  simple process 
+
+    // function x(){
+    //     document.write("Hello Bro")
+    // }
+    // x();
+
+// Example - 2   function with variable (let , var , const )
+
+    // const x = function(){
+    //     document.write('Good morning');
+    // }
+    // x();
+
+// Example - 3  function word is not requied then shortcut process,   ( ) =>
+
+    // const a = () => {
+    //     alert('page Error');
+    // }
+    // a();
+
+
+// Example - 4   
+
+    //Arrow Function 
+
+    //  Declartion of arrow function with default value....
+
+        // function x(name,age){
+        //     document.write("Hello " +name+ " Age " + age + '<br>');
+        // }
+        // x("Chandu",'44');
+        // x("Niki",'43');
+        // x();
+
+
+    // Example of undefiend value how to value put here ....
+
+        // function a(x="Stranger", y=" Unknown place"){
+        //     document.write("Hello "+x+" From " +y);
+        //     }
+        //     a();
+
+
+
+    // Example of , In this arrow method we can use with all the variable's (let ,const , var) process...
+
+
+        // const x = function (enter,name){
+        //     alert(enter);
+        //     document.write("Good Morning  "+name+"<br>");
+        // }
+        // x("Facebook login", "Chandu");
+
+
+    // Example of , In this method arrow function process  used  with function are not requried 
+
+        // const a = (x,y) => {
+        //     document.write('hello ' + x + " Year " + y);
+        // }
+        // a("Chandu",'23');
+
+
+
+// Example - 5 
+
+    //Function with Return Statement 
+
+    // example 1
+            
+            // function x(){
+            //     return " Hello Bro 289723"
+            // }
+            // let a = x();
+            // document.write(a);
+
+    
+    // example of reusable function with return 
+
+            // const a = (name) => {
+            //     return " Welcome to " + name ;
+            // }
+
+            // let b = a('Ram');
+            // document.write("<h1 style='color:red;'>"+b+"</h1>");
+
+            // let c = a("Abhi");
+            // document.write("<p>"+c+"</P>");
+
+
+    // example with reusable-logic process
+
+        // example -1
+
+            //   const x = (a,b)  => {
+            //         return a+b;
+            //   }
+            //   let b = x(30,70);
+            //   alert(b);
+
+
+        // example - 2  Expression process with function
+
+                // var a = function(n,m){
+                //     return n*m;
+                // }
+                // let b = a(20,40);
+                // alert(b);
+
+
+        //  example - 3  Normal process with function 
+
+                // function a(m,c){
+                //     return m+c;
+                // }
+                // var res = a(30,40);
+                // alert(res);
+
+        //  example - 4  one arrow statement with function body , most of used no {} bracket , no return statement 
+
+        // scenario - 1 
+
+            // const a = (x,y) => x+y;
+            // alert(a(50,50));
+
+        // scenario - 2 
+
+            // const a = ( m , c ) => "Hii "+m+" Age "+c;
+            // document.write(a(" Chendu ", ' 22 '));
+
+
+        // Scenario - 3   
+
+                    // Error Default beacause In this method 2 function string's called 
+
+            // const a = b,c => "Hii "+b+" Age "+c;
+            // document.write(a(" Chendu ", ' 22 '))
+
+        // Scenario - 3   
+
+                    // It was Default beacause In this method 1 function string called 
+
+            // const a = b => "Hii "+b;
+            // document.write(a("Chendu "))
+
+
+
+//  Example - 6 
+
+    // EXample of in this function outside with inside function
+                    
+        // function add(x){
+        //     return function(){
+        //         return x;
+        //     }
+        // }
+        // alert(add(20)());
+
+
+    // Exammple of in this function inside with variable 
+
+
+        // function add(a)
+        // {
+        //     let x = 100;
+        //     return function(){
+        //         return a+x;
+        //     }
+        // }
+        // document.write(add(20)());
+
+
+
+
+    // Example of , we can not access the inner fuction variable's with into outer function 
+
+            // Error default 
+
+
+        // function add(a)
+        // {
+        //     let x = 100;
+        //     let n = x+a;
+        //     return function(){
+        //         let a = 45;
+        //         return a+x;
+        //     }
+        // }
+        // console.log(x);
+
+
+
+// Example - 7 
+
+    // Closure fuction  
+        
+    // Example 
+
+            // function x(name){
+            //     return 20;
+            // }
+            // let a = x("Ram");
+            // alert(a);
+
+
+    // Example 
+
+        //  function x(name){
+        //         return function(y){
+        //             return "Welcome to "+name+ " Batch "+y
+        //         };
+        //     }
+        //     let a = x("Hyd");
+        //     alert(a(" 32"));
+
+
+    // Example 
+
+        function x(name){
+                return function(y){
+                    return "Welcome to "+name+ " Batch "+y
+                };
+            }
+        document.write(x(" HYD " )(" 34 "));
+
+</script>
+</html>

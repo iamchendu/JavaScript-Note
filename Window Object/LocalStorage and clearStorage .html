@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    
+<h1>Local Storage </h1>
+
+    <!-- Storage Get one file to another -->
+
+    <button onclick="accesslocalStroge()">Access Local Storage</button>
+
+
+
+
+<h1>clear Storage </h1>
+
+    <!--  Getting Storage , then Clciking , all Storgae IS clear , Null  -->
+
+    <button onclick="localStorage.clear()">Clear Storage </button>
+
+
+
+<h1>sessionStorage</h1>
+
+    <button onclick="accesssessionStroge()">Access sessionStorage</button>
+
+<script>
+
+// localStorage 
+
+
+// Storage Created on file ,  and value get in some Other file , Suppose Storage has not created then value  is null 
+
+//  localStorage Data Available each and Every page 
+
+    function accesslocalStroge(){
+
+        console.log("Name : ",localStorage.getItem("name"));
+        console.log("E-mail : ",localStorage.getItem("email"));
+        console.log("Pin : ",localStorage.getItem("pin"));
+        console.log("City : ",localStorage.getItem("city"));
+
+        alert("Getting the LocalStorage value ")
+    }
+
+
+
+// sessionStorage 
+
+//  Null showed , sessionStorage data not available on Other Page's , value not getting 
+
+    function accesssessionStroge(){
+
+        console.log("Subject : ",sessionStorage.getItem("sub"));
+        console.log("Batch-No : ",sessionStorage.getItem("batch"));
+        console.log("Love : ",sessionStorage.getItem("love"));
+
+        alert("Getting the sessionStorage value ")
+
+    }
+</script>
+</body>
+</html>

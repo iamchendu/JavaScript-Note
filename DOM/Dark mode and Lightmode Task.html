@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark / light </title>
+
+    <link rel="stylesheet" id="style" href="Light.css">
+
+</head>
+<body>
+    <h1 style="color: red;"> by Using Dom Property  </h1>
+
+    <button onclick="loadLight()">Light</button>
+    <button onclick="loadDark()"> Dark </button>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum harum facere suscipit
+         voluptate iure cum reiciendis assumenda veniam. Assumenda blanditiis cum ut, facilis officia 
+         nesciunt. Nesciunt saepe dignissimos perspiciatis optio, excepturi nulla magnam nostrum, sed
+          aspernatur debitis assumenda consequatur officiis. Quia sequi aliquid pariatur eum, doloremque
+           ut sunt tempore dolores a officiis aliquam provident deserunt possimus, numquam fugiat mollitia
+            magnam dolore quasi aspernatur ducimus ratione optio qui accusamus. Atque tempora, nobis numquam 
+            laudantium cum quisquam voluptate rem porro at ratione harum recusandae. Neque alias autem placeat
+         labore quidem ipsum dolor hic! Quibusdam distinctio illo praesentium nemo ratione.
+    </p>
+</body>
+
+<script>
+
+    let x = document.getElementById('style');
+
+    function loadLight(){
+        x.href = "Light.css" ; 
+    }
+
+    function loadDark(){
+        x.href = "Dark.css"
+    }
+</script>
+</html>

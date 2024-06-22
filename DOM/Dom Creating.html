@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div id="block"></div>
+</body>
+<script>
+
+// Example 
+
+    // var ele = document.getElementById('block');
+
+    // var x = document.createElement('h1') ;               // create a html element 
+
+    // x.setAttribute('class' , "title");                     // create a html Attribute  
+
+        // 1st process 
+
+            // var textNode = document.createTextNode("Hello Html ");                   // create a text value 
+            // x.appendChild(textNode)                                              //  element inside append the text value 
+            // console.log(x);
+
+
+        // 2nd process 
+
+            // x.innerHTML = " <p> HElo World </p>";                // Create element inside a element and add a text value 
+            // console.log(x)   
+
+    // ele.appendChild(x);                         // Append a Html element and Display the Browser 
+
+
+
+
+// Example - 2 
+var ele = document.getElementById('block');
+
+let Social = [
+    { id: 1, title: "FaceBook", link: 'http://facebook.com', target: true },
+    { id: 2, title: "WhatsApp", link: 'http://whatsapp.com', target: false },
+    { id: 3, title: "InstaGram", link: 'http://instagram.com', target: true },
+    { id: 4, title: "Twitter", link: 'http://twitter.com', target: true },
+    { id: 5, title: "Google", link: 'http://google.com', target: false }
+];
+
+// Element Sorting like (A to z ) & (z to A)
+Social.sort(function (m, n) {
+    if (m.title > n.title) {
+        return -1;
+    }
+    if (m.title < n.title) {
+        return 1;
+    }
+    return 0;
+});
+
+for (let item of Social) {
+    let anchor = document.createElement('a');
+    anchor.setAttribute("href", item.link);
+    anchor.setAttribute("target", item.target ? "_blank" : "_self");
+    anchor.style.cssText = "text-decoration: none; padding:20px; margin: 10px; background-color: red; color: white;";
+
+    let txt = document.createTextNode(item.title);
+    anchor.appendChild(txt);
+
+    ele.appendChild(anchor);
+}
+
+</script>
+</html>

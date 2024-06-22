@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaX contact </title>
+
+    <style>
+        .container{
+            width: 50%;
+            margin: 0px auto;
+            background-color: aliceblue;
+            padding: 40px;
+        }
+        .control{
+            width: 100%;
+            border: 2px solid black;
+            height: 35px;
+        }
+        .group{
+            padding: 14px 0px;
+        }
+        .btn{
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            background-color: rgb(244, 1, 151);
+        }
+    </style>
+</head>
+<body>
+    <u>    <h1>Ajax call with post Request </h1>   </u>
+    <div class="container">
+
+    <h1>Contact Here </h1>
+
+        <form method="POST" action="" onsubmit="processData()">
+
+            <div class="group">
+                <label for="">Name</label>
+                <input type="text" id="uname" class="control">
+            </div>
+
+            <div class="group">
+                <label for="">E-mail</label>
+                <input type="email" id="email" class="control">
+            </div>  
+
+            <div class="group">
+                <label for="">Mobile</label>
+                <input type="number" id="mobile" class="control">
+            </div>
+
+            <div class="group">
+                <label for="">Message</label>
+                <textarea name="msg" id="msg" cols="30" rows="10" class="control"></textarea>
+            </div>
+
+            <div class="group">
+                <input type="submit" value="Submit" name="" id="" class="btn">
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+
+// Send the Data to Server  like ( .Net  , JaVA  ) Any Server 
+
+// Scenario  - 1 
+
+        let element = document.getElementById('status');
+
+        function processData(){
+
+            event.preventDefault();                 // Page Will Not refreshing but data will submited 
+
+            let a = document.getElementById("uname").value;
+            let b = document.getElementById("email").value;
+            let c = document.getElementById("mobile").value;
+            let d = document.getElementById("msg").value;
+
+    // Example 
+            //  console.log(a,b,c,d);               // It's Checking  Data will Submited  or not 
+       
+            
+    // Example  ,  Data will Submit into a  Object  
+
+                // const data = {
+                //     userName :a ,
+                //     userEmail : b ,
+                //     userMobile : c ,
+                //     userMsg : d
+                // }
+                // console.log(data);
+
+    
+    
+    // Example  . Submit Data  will convert into a String 
+                
+                // const data = {
+                //     userName :a ,
+                //     userEmail : b ,
+                //     userMobile : c ,
+                //     userMsg : d
+                // }
+
+                // const ele = JSON.stringify(data);
+                // console.log(ele);
+
+
+
+////   POst the data to server   , Server will be collected 
+
+                const data = {
+                    userName :a ,
+                    userEmail : b ,
+                    userMobile : c ,
+                    userMsg : d
+                }
+
+                const ele = JSON.stringify(data);               //Convert Object into JSON String 
+
+                const txt = new XMLHttpRequest();
+
+                txt.open("POST" , " " , true);          //  Any Api ADDing 
+
+                txt.send(ele);                          // Sending the Data 
+
+                txt.onreadystatechange = () => {
+                    if(txt.readyState === 4 && txt.status === 200)
+                    {
+                        const x = JSON.parse(txt.responseText)              // Convert String into a Object 
+
+                        if(x.message === "Success")
+                        {
+                            element.innerHTML = "Thanks , we will Get back You soon ";                  // Data Submited  message successful then This One Working 
+
+                            element.style.cssText = "background-color :green ; color : white ; padding : 30px ; margin:5px;";
+                        }
+                        else
+                        {
+                            element.innerHTML = "Sorry Something Went Wrong ";                          // Data Message Not Submitted Then This one is working 
+
+                            element.style.cssText = "background-color : red ; color : white ; padding : 30px ; margin:5px;";
+                        }
+                        
+
+                    // After Specific time is Completed Then It Was working  
+
+                        setTimeout(()=>{
+                            element.style.display = "none"              //  5sec After Message Submit or Not , It was show , Then It was hide .. 
+                        }, 5000)
+                    }
+                }
+        }
+    </script>
+</body>
+</html>

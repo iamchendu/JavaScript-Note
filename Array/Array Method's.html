@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+<body>
+    <button onclick="data1()">isArray</button>
+    <button onclick="data2()">valueOf</button>
+    <button onclick="data3()">join</button>
+    <button onclick="data4()">concate</button>
+    <button onclick="data5()">indexOf</button>
+    <button onclick="data6()">pop</button>
+    <button onclick="data7()">push</button>
+    <button onclick="data8()">reverse</button>
+    <button onclick="data9()">slice</button>
+    <button onclick="data10()">shift</button>
+    <button onclick="data11()">toString</button>
+    
+    <div id="demo"></div>
+</body>
+<script>
+
+
+const row = ["Html","CSS","JS","JAVA","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+var item = ['The Weekend ' , 'Lil Uzi ' , 'Travis Scott' , 'Play karti' , 'Drake'];
+var x;
+
+// The isArray() method returns true if an object is an array, otherwise false
+
+    function data1(){
+        let a = Array.isArray(row);
+        document.write(a);
+        alert(x);
+    }
+
+// The valueOf() method returns the array itself.
+
+    function data2(){
+        let b = row.valueOf();
+        document.write(b);
+    }
+
+// The join() method returns an array as a string. In this method join the all element into a string 
+
+    function data3(){
+        let c = row.join( " Hlo Brother ");
+        document.write(c);
+    }
+
+// concat , In this method concatenation with two or more array's
+
+    function data4(){
+        let d = row.concat(item);
+        let e = item.concat(row);
+        document.write(e);
+        console.log(d);
+    }
+
+//  The indexOf() method returns the first index (position) of a specified value.
+// By default the search starts at the first element and ends at the last , In this method searching the value (left to right) , where it was .... 
+
+    function data5(){
+        let d = row.concat(item);
+        let e = item.concat(row);
+        let y = e.indexOf("TAIL");
+        alert(y);
+    }
+
+
+    var data = [1 ,2 , 3, 4 ,5 ,6 ,7 , 8, 9, 10]
+    var x = data;
+    document.getElementById('demo').innerText = x;
+
+// The pop()
+
+    function data6(){
+        document.getElementById('demo').innerText = x;
+        x.pop()
+    }
+
+
+// The push()
+
+    function data7(){
+        document.getElementById('demo').innerText = x;
+        x.push(10,11, 12 ,13);
+    }
+
+// The reverse()
+
+    function data8(){
+        document.getElementById('demo').innerText = x;
+        x.reverse();
+    }
+
+// The slice()
+
+    function data9(){
+        var r = x.slice(1,3)
+        document.getElementById('demo').innerText = r;
+    }
+
+// The shift()
+
+    function data10(){
+        var r = x.shift()
+        document.getElementById('demo').innerText = r;
+    }
+
+// The toString()
+
+    function data11(){
+        x.toString();
+        document.getElementById('demo').innerHTML = x;
+        alert(x);
+    }
+</script>
+</html>

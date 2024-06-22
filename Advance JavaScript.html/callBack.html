@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callBack</title>
+</head>
+<body>
+    
+    <div id="block"></div>
+
+    <script>
+
+// Example , Which Function is first Executing 
+
+
+        // function getData()
+        // {
+        //     console.log("Hello World");
+        // }
+        // function displayData()
+        // {
+        //     console.log("HII Everyone");
+        // }
+        // getData();                  //  this data is First Executing 
+        // displayData();              // After this data is Executing 
+
+
+//  Exammple - 2
+
+// Passing One function to another function called is callback function
+
+    function getData(displayData)
+        {
+
+    // Example 
+
+            let x ;
+            setTimeout(() => {
+
+                x = {id : 1 , name : "CS", city : "Hyd"};
+
+                displayData(x);
+
+            },5000);                    // After 5sec Delay complete Data Is Called 
+        }
+
+    function displayData(data)
+        {
+            console.log(data);
+        }
+        getData(displayData)
+
+    </script>
+</body>
+</html>

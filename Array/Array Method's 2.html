@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="main"> </div>
+    <script>
+
+    // const sub = ["Html","CSS","JS","JAVA","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+
+    // var x = document.getElementById('main');
+
+// Example - 1 
+
+        // x.innerHTML = sub.toString();
+        // console.log(typeof sub.toString())
+
+// Example - 2 join()
+
+        // x.innerHTML = sub.join(" @ ");
+
+    // Scenario -1 
+
+    // Convert a array into string  
+
+        // x.innerHTML = sub.join("");
+
+
+
+// Example -3 
+
+        // const arr = [6 ,7 ,8, 9 ,10 ];
+
+// Adding first element is  unshift()
+
+        // var item = arr.unshift(1 , 2, 3 ,4 ,5);
+        // arr.unshift(-0);
+        // arr.unshift(-1);
+
+// Adding last element is push()
+
+        // var item = arr.push(11,12 ,13,14,15);
+        // arr.push(16);
+        // arr.push(17);
+        // console.log(arr)
+        // console.log(item);
+
+// Example -4 
+
+        // const arr = [6 ,7 ,8, 9 ,10];
+
+// removed last element is  pop( )
+
+        // arr.pop();
+        // arr.pop();
+        // arr.pop();
+
+// removed first element is shift( )
+
+        // arr.shift();
+        // arr.shift();
+
+        // console.log(arr)
+
+// Example -5  splice()   ,  In this method  adds and/or removes array element's 
+
+
+    // const main = ["Html","CSS","JS","JAVA","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+
+//   If we pass only first argument (position ) it will divide the array into two parts ... 
+
+
+    // let ele = main.splice(2);    
+    // console.log(ele); S
+    // console.log(main);
+
+
+//   Will remove the element's from 3rd position
+
+    // let x = main.splice(4,3);    
+    // console.log(x);
+    // console.log(main);
+
+//   Nothing Will remove  the from 3rd position and Added the value in 3rd position and existing value of the 3rd position will moved the next positiono ... 
+
+    // let x = main.splice(4,3,100,200); 
+    // console.log(x);
+    // console.log(main);
+
+// Example - 6     slice() , start position default is zero ,End postion Default is last element, Negative number's select from the end of the array ...
+
+    // const main = ["Html","CSS","JS","JAVA","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+
+    // let x = main.slice(3);
+    // let a = main.slice(4,7);   // last index is not included 
+    // let b = main.slice(-4);    // negative value is included
+    // let c = main.slice(-4,-3);    // negative last value is included
+    // console.log(x);
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+
+
+// Example - 7  concat()
+
+    // const main = ["Html","CSS","JS","JAVA","bOOTSTRAP"];
+    // const arr = [6 ,7 ,8, 9 ,10];
+    // const sub = ["NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+
+    // console.log(main.concat(sub,arr));
+
+// we can also get copy of an array
+    
+        // let x = [...main,...arr,...sub];
+        // console.log(x);
+
+    
+// Example - 8  indexOf() , lastIndexOf() , include()
+
+    // const main = ["Html","CSS","JS","JAVA","Html","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ","Html"];
+
+// indexOf(), 
+        // console.log(main.indexOf("JAVA"));    // search the value where it was 
+        // console.log(main.indexOf('vhvvv'));  //this value is not founded .. Then -1 show 
+        // console.log(main.indexOf('Html'));    // Similar value is zero show 
+
+
+//  lastIndexOf()
+        // console.log(main.lastIndexOf("JAVA"));    // search the value where it was 
+        // console.log(main.lastIndexOf('vhvvv'));  //this value is not founded .. Then -1 show 
+        // console.log(main.lastIndexOf('Html'));    // Similar value is end of postion  showed 
+
+
+
+// includes()   , it was check the value is available (true) showed , value is not available (false ) showed 
+        // console.log(main.includes('Html'));
+        // console.log(main.includes('kkkk'));
+
+// Example - 9
+
+// const main = ["Html","CSS","JS","JAVA","Html","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ","Html"];
+// const arr = [6 ,7 ,8, 9 ,10];
+
+
+// find the all postion similar value , appereance  of element also .. 
+
+
+        // for (let item in main){
+        //     if(main[item] === 'Html')
+        //     console.log(item);
+        // }
+
+// How to find the maximum value and minimum value in array ?
+
+        // console.log(Math.max(...arr));
+        // console.log(Math.min(...arr));
+
+
+// Example - 10 
+
+    // const main = ["Html","CSS","JS","JAVA","Atml","BOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","DODE","MCQ","Btml"];
+    // const arr = [46 ,37 ,28, 99 ,70];
+    // const num = [46 ,9,5,37 ,24,4, 99 ,2,70,3];
+// reverse()
+            // console.log(main.reverse());
+            // console.log(arr.reverse()); 
+
+// sort()  
+
+    // Example - 1   // It was count start in Alphabetical 
+
+        // console.log(main.sort());   
+        // console.log(main.sort().reverse())   // At a time we can use both array method's
+
+    // Example -2 
+
+        // console.log(arr.sort())
+
+    // Example -3 
+
+            // console.log(num.sort());
+
+    // How can we sort numerical array's ?
+
+// Example 
+        // let num = [4,6,1,9,2];
+
+        // num.sort(function (a,b){
+
+        //         // return a-b  //start to lowest value 
+
+        //         return b-a    //start to highest value 
+        // })
+        // console.log(num);
+
+// Example 
+        
+        // num.sort((a , b) => {
+        //         return a-b;
+        // })
+                 
+        // console.log(num[num.length-1]);  //find the highest value
+        // console.log(num[0]);             // find the lowest value 
+
+
+        
+// Example - 11 
+
+// length
+
+//     const c = ["Html","CSS","JS","JAVA","Atml","BOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","DODE","MCQ","Btml"];
+    // let x = main.length;
+    // alert(x);
+
+// Example - 12 
+
+// Split()
+
+// Convert a string into array 
+
+// Example - 1  
+        //  const x = "Hello cs train is a Reservation";
+        //  console.log(x.split(" ")) ;    // Saperate the  value , whenever double qutotation mark inside space ... 
+        // console.log(x.split("a"));      // That value is hide ;
+        //  console.log(x.split(""));         // All value are convert to letter's ,whenever quotation mark are not spaced 
+
+
+// Example - 2 
+        // const  x = "Hello;cs;train;is;a;Reservation";
+        //  console.log(x.split(";"));
+            
+
+
+
+
+
+// trim()
+
+// const x = "   HEllo World !  ";
+// console.log(x);                              // It was not remove the white space 
+// console.log(x.trim());                       // It was remove the white space
+
+
+
+// replace  ()
+
+// First Quotation bracket is a Remove that item  , and second quotation bracket is a whatever value add that will be replace in original item 
+
+
+
+// Example - 1 
+
+        // const x  = " Hello World is Together is Method ";
+        // console.log(x.replace("is","everyone"));  
+
+
+
+
+// Example -2  ( i  - only intensively checked )
+
+        // const a = " Hello is Good Morning is problem ";
+        // const x = /Is/i;
+        // console.log(a.replace(x,"a"));
+        
+
+
+// Example - 3    ( ig =  intensive globaly checked ) . 
+
+        // const a = " Hello is Good Morning is problem ";
+        // const x = /Is/ig;
+        // console.log(a.replace(x,"a"));
+
+
+//  Example - 4 
+
+        // const a = " Hello is Good Morning is problem ";
+        // console.log(a.replace(/Is/ig,"to"));
+
+//replaceAll()
+
+// In this method search where it was that value , and replaced the value 
+
+        // const n  = " Hello World is Together is Method is";
+        // console.log(n.replaceAll("is","everyone"));  
+
+
+// startsWith()   
+
+//    If value is found true or false showed 
+
+        // const x = "helo World's ";
+        // console.log(x.startsWith("helo"));
+
+
+
+// endsWith()   
+
+//   If value is found true or false showed
+
+        // const l = " Good morning bro";
+        // console.log(l.endsWith("bro"));
+
+
+
+
+// at()   
+
+//  Finding the value and retruning 
+
+        // const x = "Hello World "
+        // const a = 6;
+        // console.log(`The Value is ${a} and Founding ${x.at(6)}`);
+
+
+// Example 
+
+        // const x = "Hello World"
+        // const a = -4;
+        // console.log(`The Value is ${a} and Founding ${x.at(-4)}`);
+
+
+// Array Destructuring 
+
+// Example 
+                // const [a , b, c] = [10 , 20 , 30 ];
+                // console.log(a);
+                // console.log(b);
+                // console.log(c);
+
+
+// Example 
+
+        // const [a , b, c] = [10 , 20 , 30 , 40 , 50 ];  // more value add but no difference 
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+
+// Example   // Rest Operator 
+
+        // const [a , b, c , ...d] = [10 , 20 , 30 , 40  ];  
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+        //         console.log(d);
+
+
+// Example  
+
+        // function add(a,b,...c){
+        //         console.log(a);
+        //         console.log(b)
+        //         console.log(c);
+        // }
+        // add(20,30,40,50,93)  /// It was start to end postion 
+
+
+// Object Destructuring 
+
+// Example 
+                // const {user , city , pin } = {user:"Chendu" , city : " Hyderabadh " , pin :" 888" };
+                // console.log(user);
+                // console.log(city);
+                // console.log(pin);
+    </script>
+</body>
+</html>

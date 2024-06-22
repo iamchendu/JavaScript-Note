@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+<body>
+    <div id="info"></div>
+</body>
+<script>
+    // IF i click Ascending as per the name Ascending order , If i Click Descending as per name Descending order .. 
+    const list = [
+                { ID : 1 , name  : "RAM" , pin : "23"  , salary : '10000'} ,
+                { ID : 2 , name  : "MAHI" ,  pin : "83", salary : '30000'} ,
+                { ID : 3 , name  : "KESA" ,  pin : "58", salary : '40000'} ,
+                { ID : 4 , name  : "LISA" ,  pin : "93" , salary : '50000'} ,
+                { ID : 5 , name  : "HENI" ,  pin : "02", salary : '60000'}
+        ];
+    var ele = document.getElementById("info");
+
+    function displayData(data)
+    {
+        let x = "" ; 
+        if(data.length > 0 ){
+
+                                                            // To create a Table in JAvascript 
+
+            x +=  "<table>" ;
+                x += "<thead>" ;
+                    x += "<tr>" ;
+                        x += "<th>Id</th>" ;
+                        x += "<th>Name</th>" ;
+                        x += "<th>Pin</th>" ;
+                        x += "<th>Salary</th>" ;
+                    x += "</tr>" ;
+                x += "</thead>" ;
+                x += "<tbody>" ;
+                    for(let item of data){
+                        x += "<tr>" ;
+                            x += "<td>"+item.ID+"</td>";
+                            x += "<td>"+item.name+"</td>";
+                            x += "<td>"+item.pin+"</td>";
+                            x += "<td>"+item.salary+"</td>";
+                        x += "</tr>" ;
+                    }
+                x += "</tbody>" ;
+            x += "</table>" ;
+
+            
+        }
+        else{
+            x += "<h1> Error User Not Found  </h1>" ; 
+        }
+        ele.innerHTML = x;
+    }
+    displayData(list);
+</script>

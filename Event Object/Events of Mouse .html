@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        #block{
+            width: 200px;
+            height: 60px;
+            border: 2px solid red;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #block2{
+            width: 50%;
+            margin: 0 auto;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>onclick</h1>  
+    <button onclick="a()">Click</button>
+
+    <h1>ondblclick</h1>
+    <button ondblclick="b()">Click</button>
+
+    <h1>onmouseover & onmouseout</h1>
+    <button onmouseover="c()" onmouseout="d()">Show</button>
+    <div id="block"></div>
+
+    <h1>onmousemove & onmouseout</h1>
+    <button onmousemove="e()" onmouseout="f()" id="block2"></button>
+
+</body>
+<script>
+// single click  
+
+    function a(){
+        alert('Hlo Brother');
+    }
+
+// Double click 
+
+    function b(){
+        alert('Good Way');
+    }
+
+// Mouse Hover and Mouse out 
+
+    function c(){
+        let x = document.getElementById('block');
+        x.style.cssText = "background-color :blue;";
+    }
+
+
+    function d(){
+        let y = document.getElementById('block');
+        y.style.cssText = "background-color : transparent;"
+    }
+
+
+// Mouse move and Mouse out 
+
+    function e(){
+        event.target.innerHTML = "<h1> X- axis "+ event.clientX + " Y-axis "+ event.clientY+ "</h1>";
+    }
+    function f(){
+        event.target.innerHTML = "";
+    }
+    
+</script>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await </title>
+</head>
+<body>
+
+    <div id="block"></div>
+
+<!-- loader image add  -->
+
+<img src="200w.gif" height="70px" width="70px" id="loader" alt="" style="display: none;">
+
+
+    <script>
+
+// async
+
+// Example  
+
+        // async function getData(){
+        //     return "Hello World"
+        // }
+        // console.log(getData());             // It was created a fulfilled Promise with value show
+
+
+// Example    .then() and .catch()  , it was show result success or error  value showed 
+
+        // async function getData(){
+        //     return "Hello World"
+        // }
+        // getData().then((res) => {
+        //     console.log(res);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // });
+
+
+// async  , await 
+
+// Scenario - 1
+
+        // function getUser(){
+        //     return new Promise ((resolve,reject)=>{
+        //         resolve({id:1 , name : "CS" , city : "Hyd"})                        // We can return string , Array[] , object{} , messge any method return also
+        //     })
+        // }
+        // function getAddress(){
+        //     return new Promise ((resolve,reject)=>{
+        //         resolve({pin:3223 , email : "cs@gmail.com"});
+        //     });
+        // }
+        // function displayData(user,add){
+        //     let x = {...user,...add}
+        // }
+
+        // async function displayAll()               // async method use
+        // {
+        //     let a = await getUser();                // await method use
+
+        //     let b = await getAddress();                 // await method use
+        //     displayData(a,b);
+        // }
+
+        // displayAll();           // creating a iterate object 
+
+
+
+// Scenario - 2
+
+// function getUser(){
+//             return new Promise((resolve,reject)=>{
+//                 setTimeout(()=>{
+//                     resolve({id:1 , name : "CS" , city : "Hyd"})                        // We can return string , Array[] , object{} , messge any method return also
+//                     alert(" User Data Fetched");
+//                 },5000)
+//             })
+//         }
+//         function getAddress()
+//         {
+//             return new Promise((resolve,reject)=>{
+//                 setTimeout(()=>{
+//                     resolve({pin:3223 , email : "cs@gmail.com"});
+//                     alert("Adress Data fetched ")
+//                 },2000)                                                 // Data fetching needs a lot of time 
+//             });
+//         }
+//         function displayData(user,add)
+//         {
+//             let x = {...user,...add};
+//             document.getElementById("block").innerHTML = JSON.stringify(x) ;                // convert object into a string 
+//         }
+
+//         async function displayAll()               // async method use
+//         {
+//             document.getElementById("loader").style.display = "block"               // loader image is show whenever Data not found and timeout is not completed 
+
+//             let a = await getUser();                // await method using and function called 
+
+//             let b = await getAddress();                 // await using and function called
+
+//             displayData(a,b);                           //  VALUE iterating 
+
+//             document.getElementById("loader").style.display = "none";               //// loader image is Hide whenever Data finding and delay timing is completed 
+
+//         }
+
+//     displayAll();           // creating a iterate object 
+
+
+
+
+
+// Scenario -  3 
+
+// AJax Method used  , Show the API Data 
+
+
+function getUser(){
+            return new Promise((item,reject)=>{
+               const obj = new XMLHttpRequest();
+               obj.open("GET","https://jsonplaceholder.typicode.com/users" ,true)
+               obj.send()
+               obj.onreadystatechange = () => {
+                    if(obj.readyState === 4 && obj.status === 200)
+                    {
+                        item(JSON.parse(obj.responseText))
+                    }
+               }
+            })
+        }
+        function getAddress()
+        {
+            return new Promise((resolve,reject)=>{
+                const obj = new XMLHttpRequest();
+                    obj.open("GET","https://fakestoreapi.com/users" ,true)
+                    obj.send()
+                obj.onreadystatechange = () => {
+                    if(obj.readyState === 4 && obj.status === 200)
+                    {
+                        resolve(JSON.parse(obj.responseText))
+                    }
+               }                                             // Data fetching needs a lot of time 
+            });
+        }
+        function displayData(user,add)
+        {
+            let x = {...user,...add};
+            document.getElementById("block").innerHTML = JSON.stringify(x) ;                // convert object into a string 
+        }
+
+        async function displayAll()                                         // async method use
+        {
+            document.getElementById("loader").style.display = "block"                    // loader image is show whenever Data not found and timeout is not completed 
+
+            let a = await getUser();                            // await method using , bcoz this method is wait untill the data is not coming
+
+            let b = await getAddress();                         
+
+            displayData(a,b);                                           //  VALUE iterating 
+
+            document.getElementById("loader").style.display = "none";               //// loader image is Hide whenever Data finding and delay timing is completed 
+
+        }
+
+    displayAll();           // creating a iterate object 
+
+
+    </script>
+</body>
+</html>

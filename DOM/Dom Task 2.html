@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1> Creating a NavBar Menu </h1>
+    <div class="main"></div>
+    <div id="block"></div>
+</body>
+<script>
+        // Task 
+
+// var x = document.querySelector(".main");
+//     x.style.cssText = " height:100px;  width:100%; border:3px solid red; backgroundColor:red; text-align:center;"
+
+//     let Social = [
+//         { id: 1 , title : "FaceBook " , link : 'http://facebook.com ' , target : true},
+//         { id: 2 , title : "WhatsApp " , link : 'http://whatsapp.com ' , target : false},
+//         { id: 3 , title : "InstaGram " , link : 'http://instagram.com ' , target :true },
+//         { id: 4 , title : "Twitter " , link : 'http://twitter.com ' , target :true },
+//         { id: 5 , title : " Google" , link : 'http://google.com ' , target :false }
+//     ]
+
+
+
+
+// Example - 1 
+
+
+    for(let item of Social){
+        let newEle = document.createElement('a');           //  Anchore Element Creating 
+        let txt = document.createTextNode(item.title);          // Text Adding with element 
+
+        newEle.setAttribute("href",item.link)               // Adding and Connencting with element  
+
+        newEle.setAttribute("target",item.target ? "_blank" : "_self");                     // Suppose Page Is available then blank page open , Suppose not self open
+
+        newEle.style.cssText = "text-decoration:underline; padding: 0px 10px ; margin:10px;" ;               // CSS Style Working 
+
+        newEle.appendChild(txt)                         // It was Array object value adding in Textnode
+
+        x.appendChild(newEle)                           // Value call on Browser  
+
+    }
+
+</script>
+</html>

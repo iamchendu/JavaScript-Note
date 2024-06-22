@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert String into Number </title>
+</head>
+<body>
+
+<!-- Example  -->
+
+
+<h1>  Convert a String into Number </h1>
+
+    <button onclick="click1()">ParseInt</button>
+    <button onclick="click2()">eval</button>
+    <button onclick="click3()">Parsefloat</button>
+    <button onclick="click4()">Number</button>
+    <button onclick="click5()">Math </button>
+
+
+</body>
+<script>
+
+// Example 
+
+
+// parSeint 
+
+    function click1(){
+        let x = "100" , y = "200" , z ; 
+        z = parseInt(x) + parseInt(y) ;
+        alert(z);
+    }
+
+
+// eval     , decimal number counting 
+
+    function click2(){
+        let x = "100.23" , y = "200.32" , z ; 
+        z = eval(x) + eval(y) ;
+        alert(z);
+    }
+
+
+// parseFloat()
+
+    function click3(){
+        let x = "100" , y = "200" , z ; 
+        z = parseFloat(x) + parseFloat(y) ;
+        alert(z);
+    }
+
+
+// Number()
+
+    function click4(){
+        let x = "100" , y = "200" , z ; 
+        z = Number(x) + Number(y) ;
+        alert(z);
+    }
+
+
+//  Math.trunc()
+
+    function click5(){
+        let x = "100" , y = "200" , z ; 
+        z = Math.trunc(x) + Math.trunc(y) ;
+        alert(z);
+    }
+
+
+</script>
+</html>

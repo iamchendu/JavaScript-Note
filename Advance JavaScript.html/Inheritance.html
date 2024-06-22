@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+    <script>
+
+// Scenario - 1
+
+
+// One class method data fulfilled and Another class method data is null , how to transfer ? 
+
+        class Father                        /// Data is fulfilled 
+        {
+            getUser(){
+                document.write("I have 10,000 Doller's <br> ")
+            }
+            getTake(){
+                document.write("I have a Car ")
+            }
+        }
+        class Child extends Father              // Data is null but it Extend's that class method   and Take the All Data 
+        {
+
+        }
+
+        const x = new Child();
+
+        x.getUser();
+        x.getTake();
+
+
+// Scenario - 2 
+
+    </script>
+</body>
+</html>

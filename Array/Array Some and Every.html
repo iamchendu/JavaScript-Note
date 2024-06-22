@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+<body>
+    <h1>some()</h1>
+    <h1>every()</h1>
+
+    <h4>This method Give's only (True , False )</h4>
+</body>
+
+<script>
+
+// some()   , true if any of the aray elements pass the test, otherwise false.
+
+// Scenario -1 
+
+        const data = [
+                { ID : 1 , name  : "RAM" , pin : ["23" , "55"] , salary : '10000'} ,
+                { ID : 2 , name  : "MAHI" ,  pin : "83", salary : '30000'} ,
+                { ID : 3 , name  : "KESA" ,  pin : "58", salary : '40000'} ,
+                { ID : 4 , name  : "LISA" ,  pin : ["93" , "23"], salary : '50000'} ,
+                { ID : 5 , name  : "HENI" ,  pin : "02", salary : '60000'}
+        ];
+    const x = data.some( (a,b) => {
+
+// Example - 1 
+
+        return a.salary <=  20000;    // In these condition satisfied element's 
+
+// Example - 2
+
+        // return a.salary <=  5000;    // In these condition not satisfied element's 
+
+    })
+    console.log(x);
+
+
+
+
+
+
+
+
+// every()   , True  if all element's pass the value , Otherwise false 
+
+// Scenario -1 
+
+const list = [
+                { ID : 1 , name  : "RAM" , pin : ["23" , "55"] , salary : '10000'} ,
+                { ID : 2 , name  : "MAHI" ,  pin : "83", salary : '30000'} ,
+                { ID : 3 , name  : "KESA" ,  pin : "58", salary : '40000'} ,
+                { ID : 4 , name  : "LISA" ,  pin : ["93" , "23"], salary : '50000'} ,
+                { ID : 5 , name  : "HENI" ,  pin : "02", salary : '60000'}
+        ];
+    const k = list.every( (a,b) => {
+
+// Example - 1 
+
+        // return a.salary <=  10000;   // In these condition not  satisfied elemet's  
+
+// Example - 2 
+
+        return a.salary <=  70000;     // In these condition  satisfied elemet's  
+
+    });
+    console.log(k);
+
+
+</script>
+</html>

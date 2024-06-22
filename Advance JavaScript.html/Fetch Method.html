@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch method </title>
+</head>
+<body>
+    
+    <script>
+
+// Example - 1
+
+        // fetch("https://fakestoreapi.com/users").then((res)=>{
+        //     console.log(res.json());
+        // }).catch((err)=>{
+        //     console.log(err);           // create the Promise and all Api Data show on Array Object 
+        // })
+
+
+
+// Example - 2 
+
+        // async function getUser(){
+        //     const x = await fetch("https://fakestoreapi.com/users");
+        //     const a = await x.json();
+        //     console.log(a);
+        // }
+        // getUser();              // Show the Array Object 
+
+
+// Scenario 
+
+// try{}  , in this method work like .then() , Suppose Successfully result is there then  try{} method working 
+
+//  catch(){}.in this method work like .catch() , Suppose result is Not there then  catch{} method working 
+
+// Example 
+
+        // async function getUser(){
+        //     try{            
+        //         const x = await fetch("https://fakestoreapi.com/users");
+        //         const a = await x.json();
+        //         console.log(a);
+        //     }
+        //     catch(err){
+        //         alert("Erroṛ !");
+        //     }
+        // }
+        // getUser();              // Show the Array Object 
+
+
+
+
+// Example - 2    , throw , finally 
+
+        // function getUser(){
+        //     try{
+        //         throw new Error("HIII")
+        //     }
+        //     catch(err){
+        //         console.log(err);
+        //     }
+        // }
+        // getUser()
+
+
+    // Example 
+            
+        function getUser(){
+            try{
+                if(true){
+                    return { id : 1 }
+                }
+                throw new Error("Thank You ")
+            }
+            catch(err){
+                console.log(err);
+            }finally{
+                alert("error ! ");
+            }
+        }
+        let x = getUser();
+        console.log(x);
+
+
+    </script>
+</body>
+</html>

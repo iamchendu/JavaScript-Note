@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+<body>
+    <h1>FindIndex()</h1>
+</body>
+<script>
+    const data = [
+                { ID : 1 , name  : "RAM" , pin : ["23" , "55"] , salary : '10000'} ,
+                { ID : 2 , name  : "MAHI" ,  pin : "83", salary : '30000'} ,
+                { ID : 3 , name  : "KESA" ,  pin : "58", salary : '40000'} ,
+                { ID : 4 , name  : "LISA" ,  pin : ["93" , "23"], salary : '50000'} ,
+                { ID : 5 , name  : "HENI" ,  pin : "02", salary : '60000'}
+        ];
+
+
+    const x = data.findIndex((a,b) => {
+        // return a.name == "LISA";        // It was found the array value in array postion   
+
+        // return a.name == "Krish" ;          // If value is not found -1 show 
+    })
+    console.log(x);
+</script>
+</html>

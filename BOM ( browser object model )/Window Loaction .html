@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+
+    <div id="block">
+        <img src="Location.png" height="400px" width="500px" alt="">
+        <h2>Location Usable , We can get Current page Url , Host , Origin , Protocol ,some etc ..  </h2>
+    </div>
+    
+
+<!--  How can We refresh the page URl in JaVAScript  -->
+
+    <button onclick="location.reload()">Reload</button>
+
+<!--  Assign the new URL in place of Current URL ,  this method enable browser back button -->
+
+    <button onclick="location.assign('https://google.com')">Assign</button>
+
+<!-- Replace a new URL in place Of Current URL   , this method does not enable browser back button -->
+
+    <button onclick="location.replace('https://google.com')">Reload</button>
+
+</body>
+</html>

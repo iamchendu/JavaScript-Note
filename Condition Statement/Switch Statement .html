@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition statement</title>
+</head>
+<body>
+    
+
+<!-- 3rd example -->
+
+    <h1 id="text"></h1>
+    <button onclick="some('increment')">Increment</button>
+    <button onclick="some('decrement')">Decrement</button>
+    <button onclick="some('reset')">Reset</button>
+</body>
+<script>
+
+// 3rd example , switch statement with button and value increment or decrement or reset 
+
+// 1st process 
+
+
+    // var a = document.getElementById('text');
+    // let x = 1;
+    // function some(y){
+    //     switch(y){
+    //         case "increment":
+    //             a.innerHTML = x+1 ;
+    //             break;
+    //         case "decrement":
+    //             a.innerHTML = x-1 ;
+    //             break;
+    //         case "reset":
+    //             a.innerHTML = 0 ;
+    //             break;
+    //         default :
+    //         alert('Sorry Unable to login');
+    //     }
+    // }
+
+
+// 2nd process
+
+    var a = document.getElementById('text');
+        let x = 0;
+        function some(y){
+            switch(y){
+                case "increment":
+                    a.innerHTML = x = x+1 ;
+                    break;
+                case "decrement":
+                    a.innerHTML = x=x-1 ;
+                    break;
+                case "reset":
+                    a.innerHTML = 0 ;
+                    break;
+                default :
+                alert('Sorry Unable to login');
+            }
+        }
+
+// 1st example  Swith statement simple process
+
+    // let c = 3;
+    // switch (c){
+    //     case 1 : 
+    //         alert("Hlo Brother");
+    //         break;
+    //     case 2 : 
+    //         alert("Good vibe");
+    //         break;
+    //     case 3 : 
+    //         alert("calfornia");
+    //         break;
+    //     case 4 : 
+    //         alert("Toxic");
+    //         break;
+    //     case 5: 
+    //         alert("Broke");
+    //         break;
+    //     default: 
+    //         alert('Error');
+    //         break;
+    // }
+
+
+// 2nd example ,   In this switch statement value call with prompt 
+
+    // var a = prompt("Enter the number");
+    // let b = parseInt(a);
+    // switch (b){
+    //     case 1 : 
+    //         alert("Hlo Brother");
+    //         break;
+    //     case 2 : 
+    //         alert("Good vibe");
+    //         break;
+    //     case 3 : 
+    //         alert("calfornia");
+    //         break;
+    //     case 4 : 
+    //         alert("Toxic");
+    //         break;
+    //     case 5: 
+    //         alert("Broke");
+    //         break;
+    //     case 6: 
+    //         alert("SAd");
+    //         break;
+    //     default: 
+    //         alert('Error');
+    //         break;
+    // }
+
+
+    
+    
+</script>
+</html>

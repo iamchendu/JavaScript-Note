@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window Objects</title>
+</head>
+<body>
+
+    <button onclick="clickAlert()">Alert</button>
+    <button onclick="clickConfirm()">Confirm</button>
+    <button onclick="clickPrompt()">Prompt</button>
+
+    <button onclick="clickEncry()">btoa</button>
+    <button onclick="clickDecry()">atob</button>
+
+
+    <button onclick="clickencode()">encodeURIComponent</button>
+    <button onclick="clickdecode()">decodeURIComponent</button>
+
+
+</body>
+<script>
+
+//  we can use with window , otherwise element allso
+
+// Alert()
+
+    function clickAlert(){
+        alert("Page Sucessfull Done .. ")
+    }
+
+
+//  Confirm()
+
+    function clickConfirm(){
+        window.confirm(" Do you Want Login -- ")
+    }
+
+
+// Prompt()
+
+    function clickPrompt(){
+
+    //  Ex - 1 
+
+        // var x = prompt(" What About You");
+        // console.log(x);
+
+    //  Ex - 2      //  value created 
+
+        prompt("Hlo " , "ram")
+    }
+
+
+// btoa()
+
+    // Encryption code  created 
+
+        function clickEncry(){
+            var x = "Ram@1234" ;
+            alert(btoa(x));
+        }
+
+
+// atob()
+
+    // Decryption code created , will be right  code 
+
+    function clickDecry(){
+            var x = "Ram@1234" ;
+            alert(atob("UmFtQDEyMzQ="));
+        }
+
+
+
+// encodeURIComponent()
+
+    // It was required to the URI and type like a String 
+
+        function clickencode(){
+            let x = "https://www.filmywap.uk.in/"; 
+            window.console.log(encodeURIComponent(x));
+        }
+
+
+// encodeURIComponent()
+
+    // It was required to the only URI  
+
+        function clickdecode(){
+            let x = "https://www.filmywap.uk.in/"; 
+            console.log(decodeURIComponent(x));
+        }
+
+
+
+
+</script>
+</html>

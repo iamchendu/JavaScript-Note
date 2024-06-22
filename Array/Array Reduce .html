@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+<body>
+    <h1>reduce()</h1>
+</body>
+<script>
+    const data = [
+                { ID : 1 , name  : "RAM" , pin : "55" , salary : 10000} ,
+                { ID : 2 , name  : "MAHI" ,  pin : "83", salary : 30000} ,
+                { ID : 3 , name  : "KESA" ,  pin : "58", salary : 40000} ,
+                { ID : 4 , name  : "LISA" ,  pin : "93" , salary : 50000} ,
+                { ID : 5 , name  : "HENI" ,  pin : "02", salary : 60000}
+        ];
+// Scenario - 1
+
+    // const total = data.reduce((a,b,c,d) => {
+    //     // console.log(a);          
+    //     // console.log(b);       // Iterate the array Object value's 
+    //     // console.log(c);         // To Show the Array Index 
+    //     // console.log(d);      // Iterate the Array 
+    // },0)
+
+
+// Scenario - 2 
+
+    // const total = data.reduce((a,b) => {
+
+// Example 
+
+        // return a += b.salary    /// Total Salary is calculated with Intialvalue  
+    // }, 0)
+
+// Example 
+
+    //     return a += b.salary    /// Total Salary is calculated with Intialvalue  
+    // }, 200)
+
+
+// Example 
+
+    //     return a *= b.salary    /// Total Salary is calculated with Intialvalue  
+    // }, 0)
+
+
+    // console.log(total);
+
+
+// Scenario - 3   , Total With Average value will be calculated  
+
+
+    const total = data.reduce((a,b) => {
+        return a += b.salary    /// Total Salary is calculated  and Average value be calculated with Intialvalue  
+    }, 0)
+    console.log("Total Salary "+total);
+    console.log("Average Salary Count " + total/data.length);
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+
+    <h1>
+        JSON.parse()
+        <br>
+        JSON.stringify()
+    </h1>
+    <script>
+
+// JSON
+
+// Scenario - 1   
+
+// parse()
+
+//  Convert Json String into a Object  
+
+    // let data = '{ "ID" : 1 , "name" : "CS" , "email" : "cs@gmail.com","city" :  "Hyd"}' ;                 // This is  a Json String 
+
+
+    // Example ,  parse()   It was Convert json string into a Object 
+
+        // console.log(JSON.parse(data));              
+
+
+    // Example , In parse()  method  We can call Any property Value 
+
+            // const a = JSON.parse(data);
+            // console.log(a.name);
+
+
+    // Example  ,  It was show only Json String 
+
+        // console.log(data);                  
+
+ 
+
+// Scenario - 2
+
+// stringiFy()
+
+// Convert Object into a  String 
+
+    // const x = {"Sub" : "English" , "Batch" : "10" , "State" : "TL" }                             //  This is a Javascript Object
+
+    // Example , Json string converting 
+
+        // const b = JSON.stringify(x);
+        // console.log(b);
+
+
+
+
+//  Example , JSON Object convert into a string 
+
+        // const user = [
+        //     {
+        //         "userId": 1,
+        //         "id": 1,
+        //         "title": "sunt aut facereprehenderit"
+        //     },
+        //     {
+        //         "userId": 1,
+        //         "id": 2,
+        //         "title": "qui est esse"
+        //     }
+        // ]
+
+        // console.log(JSON.stringify(user));
+
+
+//  Example , Array Object convert into a String  
+
+        const data = [
+            {id : 1 , name : "CS" , pin : "343" , city : "Hyd"},
+            {id : 1 , name : "NS" , pin : "232" , city : "BAM"},
+            {id : 1 , name : "SM" , pin : "922" , city : "ODS"},
+            {id : 1 , name : "KO" , pin : "422" , city : "HYD"},
+            {id : 1 , name : "AN" , pin : "872" , city : "ODS"},
+        ]
+
+        const x = JSON.stringify(data);
+        console.log(x);
+    </script>
+</body>
+</html>

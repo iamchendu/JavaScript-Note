@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This & Event </title>
+    <style>
+        #add{
+            width: 500px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        #block{
+            width: 400px;
+            height: 400px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1> What is the purpose of This or event keyword  </h1>
+
+    <u><h1>Example - 1 This keyword  </h1></u>
+    <h4>On use with Mouse Event's , onclick</h4>
+
+    <h1 onclick="hide(this)">Hello one</h1>
+    <h1 onclick="hide(this)">Hello Two</h1>
+    <h1 onclick="hide(this)">Hello Three</h1>
+    <h1 onclick="hide(this)">Hello Four</h1>
+    <h1 onclick="hide(this)" >Hello Five</h1>
+
+
+    <br>
+    <u><h1>Example - 2 This keyword  </h1></u>
+    <h4>In this method This keyword  use with MOUSE EVENT'S ,,  onmouseover, onmouseout , onclick .. </h4>
+    <div onmouseover="addbg(this)" onmouseout="removebg(this)" onclick="clicktext(this)" id="add"></div>
+
+
+    <br>
+
+    <u><h1>Example - 1 event keyword  </h1></u>
+
+    <h1 onclick="now()">Hello one</h1>
+    <h1 onclick="now()">Hello Two</h1>
+    <h1 onclick="now()">Hello Three</h1>
+    <h1 onclick="now()">Hello Four</h1>
+    <h1 onclick="now()" >Hello Five</h1>
+
+
+    <br>
+
+    <u><h1>Example - 2 event keyword  </h1></u>
+    <h4>In this method event keyword  use with MOUSE EVENT'S ,,  onmouseover, onmouseout , onclick .. </h4>
+    <div onmouseover="addbg()" onmouseout="removebg()" onclick="clicktext()" id="add"></div>
+
+
+    <br>
+    <u><h1>Example - 3 Event keyword </h1></u>
+    <h4> In this method Event keyword use with MOUSE EVENT'S ,,  onmousemove, and we shold know to horizontal , vertical size</h4>
+    <div onmousemove="moved()" onmouseout="clearBg()" id="block"></div>
+</body>
+<script>
+
+//  Example of This keyword 
+
+    function hide(x){
+        x.style.display = 'none';
+    }
+
+
+//  Example - 2 This keyword 
+    function addbg(x){
+        x.style.cssText = " background-color:yellow; border-radius:50%; border:5px solid black;"
+    }
+    function removebg(y){
+        y.style.cssText = "background-color:green; border-radius:60%;  "
+    }
+    function clicktext(z){
+        z.innerHTML = "<h3> Hlo World Good Preparing Mole's </h3>"
+    }
+
+
+//  Example of Event keyword and it was needs to target keyword
+
+//  Example - 1 Event keyword 
+
+// process-1 console checked 
+
+    // function now(){
+    //     console.log(event.target);
+    // }
+
+// process-2
+    function now(){
+        event.target.style.display = ' none';
+    }
+
+
+//  Example - 2 Event keyword 
+    function addbg(){
+        event.target.style.cssText = " background-color:red; border-radius:120px; border:5px solid blue;"
+    }
+    function removebg(){
+        event.target.style.cssText = "background-color:transparent; border-radius:50%;  "
+    }
+    function clicktext(){
+        event.target.innerHTML = "<h1> Hlo World Good Preparing Mole's </h1>"
+    }
+
+
+ // Example - 3 Event Keyword
+    function moved(){
+        event.target.innerHTML = "<h1> X-axis :" + event.clientX +" Y-axis : "+ event.clientY +"</h1>"
+    }
+    function clearBg(){
+        event.target.innerHTML = "";
+    }
+</script>
+</html>

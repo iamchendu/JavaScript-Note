@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Timing Function </title>
+</head>
+<body>
+
+    <h1>SetInterval , It will Call the function for Every Specifice time </h1>
+
+    <h1>clearInterval , It will Stop the function for Every Specifice time </h1>
+
+
+    <!--  -->
+
+    <div id="time"></div>
+
+    <!--  -->
+
+
+    <button onclick="timeStart()">Start</button>
+    <button onclick="timeStop()">Stop</button>
+
+
+    <script>
+
+// setInterval()   // clearInterval 
+
+// Example 
+
+// In the Item  (1000 = 1sec)  , (10000 = 10sec)  , Any timing after value will be increment  many time 
+
+        // let x;
+        // x = setInterval(() => {
+        //     alert(" Hlo World ");
+        // },1000);                         // 1 sec after value will be increment  
+        
+        
+
+
+//  Example , If the value will be increment by limiting
+
+        // let x;
+        // let i = 1 
+        // x = setInterval(() => {
+        //     console.log(i);
+        //     if(i === 20 )
+        //     {
+        //         clearInterval(x);           // Found the value will completely then Stoping ,  ClearInterval Working
+        //     }
+        //     i++;
+        // },1000);
+
+
+
+//  Example , setInterval() 
+
+    // Currrent Timing Will be running mode 
+
+        // var x = document.getElementById("time");
+
+        // function displayTime()
+        // {
+        //     var a = new Date();
+        //     x.innerHTML = a.toLocaleTimeString();
+        // }
+        // setInterval(displayTime, 1000);      
+        // displayTime();
+
+
+
+
+//  Example  , setInterval()  , clearInterval()
+
+
+    // How To a function Start and Stop in specifice time , example 
+
+        var x = document.getElementById("time");
+
+        let ele ;
+
+        function displayTime()
+        {
+            var a = new Date();
+            x.innerHTML = a.toLocaleTimeString();
+        }
+        ele = setInterval(displayTime, 1000);      
+        displayTime();
+
+        function timeStart(){
+            ele = setInterval(displayTime,1000);
+        }
+        function timeStop(){
+            clearInterval(ele);
+        }
+
+    </script>
+</body>
+</html>

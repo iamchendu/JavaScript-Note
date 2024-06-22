@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <script>
+    // This is a Object 
+
+        // class sample
+        // {
+        //     x = 100 ;
+        //     a = 200 ;
+        //     name = "Chandu";
+        //     add(){
+        //         return this.x + this.a;
+        //     }
+        //     welcome()
+        //     {
+        //         return "Good Morning "+this.name;       
+        //     }
+        //     jhon()
+        //     {
+        //         return " Feeling Good "+name;           // In this property value is not called  bcoz (this) object is not called 
+        //     }
+        // }
+        // const data = new sample()               // Class member called 
+
+        // let b = data.add();                     // Property  method called with this object 
+        // console.log(b);
+
+        // console.log(data.welcome());
+
+        // console.log(data.jhon());
+
+
+// Scenario - 2 
+//  One method into another method call with this keyword 
+    class sample
+        {
+            x = 100 ;
+            a = 200 ;
+            name = "Chandu";
+            add(){
+                return this.x + this.a;
+            }
+            welcome()
+            {
+                return "Good Morning "+this.name;       
+            }
+            jhon()
+            {
+                console.log(this.welcome());                    // Another function called 
+            }
+        }
+        const data = new sample()               // Class member called 
+
+        let b = data.add();                     // Property  method called with this object 
+        console.log(b);
+
+        data.jhon()
+    </script>
+</body>
+</html>

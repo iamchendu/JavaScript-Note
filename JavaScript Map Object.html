@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+
+    <h1> Map Object </h1>
+    <script>
+
+// Example 
+
+// How can We add value's in the Map() ,  In this object show with Arrow mark => 
+
+        // const x = new Map();
+
+        // x.set("ID" , 10);
+        // x.set("name" , "CS");
+        // x.set("city" , "Hyd");
+        // x.set("pin" , 34333 );
+
+        // console.log(x);
+
+
+// How can We Iterare  in Map()
+
+        // const x = new Map();
+
+        // x.set("ID" , 10);
+        // x.set("name" , "CS");
+        // x.set("city" , "Hyd");
+        // x.set("pin" , 34333 );
+
+        // console.log(x.keys());                       // Iterate the keys 
+        // console.log(x.values());                     // Iterate the value's 
+        // console.log(x.entries());                    // Iterate the object into array
+
+
+// In Map() Object  , How can We iterate with forEach() method 
+
+        // const x = new Map();
+
+        // x.set("ID" , 10);
+        // x.set("name" , "CS");
+        // x.set("city" , "Hyd");
+        // x.set("pin" , 34333 );
+
+        // x.forEach((a,b,c) => {
+        //     // console.log(a);                      // Iterate with value's 
+        //     // console.log(b);                      // Iterate with key's 
+        //     console.log(c);                         // Iterate with Object into Array 
+        // });
+
+
+
+// Scenario  
+
+//  , Getting The Key Value's  //  Delete the Propery in Object        // clear the All Property 
+
+        const x = new Map();
+
+        x.set("ID" , 10);
+        x.set("name" , "CS");
+        x.set("city" , "Hyd");
+        x.set("pin" , 34333 );
+        x.set(1 , "CSSS" );
+        x.set(2 ,  "ol ");
+
+    ////    Get the Key Value's 
+
+        console.log(x.get("ID"));
+        console.log(x.get("pin"));
+
+    ////    Delete the Key Value's 
+
+        x.delete("city");
+        x.delete(2);
+
+        console.log(x);
+
+
+    //    clear the all Property 
+    
+        x.clear()
+        console.log(x);
+
+
+
+            
+    </script>
+</body>
+</html>

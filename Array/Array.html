@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array's are represented with [ ]</h1>
+    <div id="main"></div>
+</body>
+<script>
+
+//   Example of  Array's working like  , It was count to 0 to end of the number ... 
+
+    // var a = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+    // var b = [10,20,30,40,50,60,70,80,90,100];
+    // console.log(a);
+    // console.log(b);
+
+
+    // How to check the array's length 
+
+        // var a = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+        // console.log(a.length);
+        
+// How can we access the array value's  ? 
+
+// Example - 1  array process
+
+    // 1st process
+
+            // var a = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+            // document.write(a[0]);
+            // alert(a[4]);
+
+
+    // 2nd process
+
+            // var a = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+            // a[5] = 'Page Error ';
+            // document.write(a[2]);
+            // alert(a[5]);
+
+    // 3rd process
+
+        //  var a = [10,20,30,40,50,60,70,80,90,100];
+        //     a[9] = 'Page Error ';
+        //     document.write(a[2]);
+        //     alert(a[9]);
+
+
+// Example - 2  array process
+
+    // var a = new Array;
+    // a = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+    // alert(a[4]);
+
+    
+
+// Example - 3  array process
+
+    // var a = [
+    //     { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"} ,
+    //     { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83"} ,
+    //     { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "928"} ,
+    //     { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93"} ,
+    //     { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02"}
+    // ]
+    // console.log(a[3]);
+
+
+// Example - 4   array process
+
+    // let b = [
+    //     [20,340],
+    //     ["Hello","Js"],
+    //     ["GIan","HHH"],
+    //     ["Mexico",829],
+    //     [34,"uu"]
+    // ]
+    // alert(b[2]);
+
+
+// Example - 5 How can we  get element By ID with array process
+
+
+    // example - 1 
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+        // a.innerHTML = "<h1> Hello "+b[3]+" </h1>";
+
+
+    // example - 2 
+
+    // array with same string name and property with diffferent value ;
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3','Car 4','Car5'];
+        // a.innerHTML += "<h1> Hello "+b[0]+" </h1>";
+        // a.innerHTML += "<h1> Hello "+b[1]+" </h1>";
+        // a.innerHTML += "<h1> Hello "+b[2]+" </h1>";
+        // a.innerHTML += "<h1> Hello "+b[3]+" </h1>";
+        // a.innerHTML += "<h1> Hello "+b[4]+" </h1>";
+
+
+
+// Example - 6  , How can be iterate the array Value's  with looping method ?
+
+// like increased more value and decreased value , how to put the array with short and property ..  // 
+
+
+    // 1st example  of more increased value 
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3','Car 4','Car5','Car 6','Car 7','Car 8'];
+        
+        // for(let i = 0 ; i < b.length ; i++){
+        //     a.innerHTML += "<h1> Hello " +b[i]+" </h1>";
+        // }
+    
+
+    // 2nd example  of low decreased value 
+
+        // var a = document.getElementById("main");
+        // let b = ['Car 1','Car 2','Car 3'];
+        
+        // for(let i = 0 ; i < b.length ; i++){
+        //     a.innerHTML += "<h1> Hii  " +b[i]+" </h1>";
+        // }
+
+// Example - 7 
+
+// Difference between ( For in , For of ) In this loop's working for array's  
+
+// Example-1 
+
+// How can be iterate the value ?
+
+    // var item = document.getElementById('main');
+    // const row = ["Html","CSS","JS","JAVA","bOOTSTRAP","NODE","MANGO DB","TAIL","PYTHON","CODE","MCQ"];
+
+    // for of loop 
+
+        // for(let a of row){
+        //     item.innerHTML += "<i> Course only "+a+" ,Do it </br> </i>";
+        // }
+
+    // for in loop 
+
+        // for(let c in row){
+        //     item.innerHTML += "<h1> Schedule "+row[c]+"</h1>";
+        // }
+
+
+// Example - 8
+
+// In the array How can we access the object value;
+
+    // const user = { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"};
+
+// 1st process
+
+        // alert(user["email"]);
+
+// 2nd process
+
+        // alert(user.pin);
+
+
+
+// Example - 9
+
+// IN the array there are many of object's , How can we access an one object with one value ?
+
+// Example -2 
+
+
+        // const a = [
+        //     { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"} ,
+        //     { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83"} ,
+        //     { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "928"} ,
+        //     { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93"} ,
+        //     { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02"}
+        // ]
+    
+// 1st process
+
+        // console.log(a[3]["name"]);
+
+// 2nd process
+
+        // alert(a[4].email);
+
+
+
+// Example-2  In this method (for in , for of ) process and all are the iterated 
+
+
+    // var item = document.getElementById('main');
+    // const a = [
+    //         { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"} ,
+    //         { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83"} ,
+    //         { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "928"} ,
+    //         { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93"} ,
+    //         { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02"}
+    //     ]
+    // for(let m of a ){
+    //     item.innerHTML += "<p> Hii  "+m.name+" or Email "+m.email+" pin "+m.pin+"</p>";
+    // }
+    
+
+
+// Example - 10 
+
+        const a = [
+            { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"} ,
+            { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83"} ,
+            { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "928"} ,
+            { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93"} ,
+            { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02"}
+        ]
+
+        let x = " " ;
+        let id = document.getElementById('main');
+
+        if(a.length > 0){
+
+        }
+        else{
+
+        }
+
+        id.innerHTML = x ;
+</script>
+</html>

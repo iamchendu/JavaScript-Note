@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaX</title>
+
+    <style>
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: aliceblue;
+        }
+        #table {
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #table td, #table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table tr:nth-child(even){background-color: #f2f2f2;}
+
+        #table tr:hover {background-color: #ddd;}
+
+        #table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- IF any Data Click Information Show Example  -->
+
+    <div class="container">
+        <h1>Covid - 19 Information Show</h1>
+
+        <div class="group">
+            <label for="">Select State Code : </label>
+            <select name="" id="state" style="width: 300px; height: 35px;" onchange="getDistrict(this.value)">
+                <option value="">--select state -- </option>
+            </select>
+        </div>
+
+        <img src="200w.gif" id="loader" height="60" width="60" alt="" style="display: none;">
+
+        <div id="data"></div>
+    </div>
+
+    <script>
+        // Send the request server to get the Covid Data 
+
+        let data = {};
+        let load = document.getElementById('loader');
+        let st = document.getElementById("state");
+        let ele = document.getElementById("data")
+
+        function getCovidData()
+        {
+            load.style.display = "block" ;                      /// It was onclick button show the loader image 
+            const x = new XMLHttpRequest();
+            x.open("GET", "https://data.covid19india.org/v4/min/data.min.json" , true);                 // API copy of Covid19 JSON data and ADDed 
+            x.send();
+
+            x.onreadystatechange = function() 
+            {
+                if(x.readyState == 4 && x.status == 200)
+                {
+                    const responsData = JSON.parse(x.responseText);                 // Data Convert string into a Object 
+
+                    data = {...responsData}                 //Data Pushing
+
+                    let txt = "";                               
+                    txt += "<option> -- Select State -- </option>";                             // PlaceHolder Created 
+
+                    for(let item in responsData){                                                       // Data Iterating 
+
+                        txt += "<option value='"+item+ "'> "+item+"</option>";                // All Data will Option  by Choosing and No spacing 
+
+                    }
+
+                    st.innerHTML = txt;                                             // Data Display on Browser
+
+                    load.style.display = 'none';                            // After Data Find loader image is Hide
+                }
+            }
+
+        }
+        getCovidData();
+
+
+        function getDistrict(val)
+        {
+
+
+        // Table Creating 
+
+            let txt = '';
+            txt += "<table id='table'>";                // table Start 
+                txt += "<thead>";
+                    txt += "<tr>";
+
+                        txt += "<th> Sl-No  </th> ";                                // create a Serial number
+                        txt += "<th> District Name </th> ";
+                        txt += "<th> First vaccinated</th> ";
+                        txt += "<th> Second vaccinated</th> ";  
+
+                    txt += "</tr>";
+                txt += "</thead>";
+
+                txt += "<tbody>";
+
+            for(let item in data)                   // Data Iterating 
+            {
+                if(item === val)
+                {
+                   
+                    let dist = data[val].districts;             // Show the  District information 
+                    let i = 1 ;                                 // create a Serial number 
+
+                    for(let ditem in dist)
+                    {
+                        // Suppose value is undefiend  , Then that data no going to printed 
+
+                        let one = dist[ditem]?.total?.vaccinated1 ? dist[ditem]?.total?.vaccinated1: '' ; 
+                        let two = dist[ditem]?.total?.vaccinated1 ? dist[ditem]?.total?.vaccinated2: '' ; 
+
+                        txt += "<tr>";
+
+                            txt += "<td>"+i+"</td>";                        // create a Serial number
+                            txt += "<td>"+ditem+"</td>";
+                            txt += "<td>"+one+"</td>";     
+                            txt += "<td>"+two+"</td>"
+
+                        txt += "</tr>";
+
+
+                        // console.log(ditem[ditem].total);                        // Total Data Showed 
+                        // console.log(ditem[ditem]?.total?.vaccinated1);              // Vacinated Data  Showing
+                        // console.log(ditem[ditem]?.total?.vaccinated2);
+
+                        // console.log(ditem[ditem].total.confirmed);              // confirmed Data Showed 
+                        // console.log(ditem[ditem].total.deceased);               // Decresed Data Showed 
+                        // console.log(ditem[ditem].total.recovered);              // Recovered Data Showed 
+                        // console.log(ditem[ditem].total.teste);                  // Teste Data Showed 
+                    }
+                }
+            }
+            txt += "</tbody>"; 
+
+            txt += "</table> "          // table close 
+
+            ele.innerHTML = txt;
+
+        }
+
+
+    </script>
+</body>
+</html>

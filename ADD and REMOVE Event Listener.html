@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- <button  id="btn"> Click </button> -->
+
+
+    <h1>Click 1</h1>
+    <h1>Click 2</h1>
+    <h1>Click 3</h1>
+    <h1>Click 4</h1>
+    <h1>Click 5</h1>
+</body>
+<script>
+
+// addEventListener()
+// removeEventListener()
+
+
+// Example  
+
+//  Run time Adding , Click working only one time , not Multiple Time's 
+
+
+    // var x = document.getElementById('btn');
+    // function doSome(){
+    //     alert("Hello World's");
+    //     btn.removeEventListener('click',dosome);
+
+    // }
+
+    // btn.addEventListener('click',doSome);
+
+
+
+
+
+// Example  
+
+// button value will be replaced 
+
+    // var x = document.getElementById('btn');
+    //     function doSome(){
+    //         btn.innerHTML = "Loading....";
+    //         btn.removeEventListener('click',dosome);
+    //     }
+
+    //     btn.addEventListener('click',doSome);
+
+
+
+
+
+// Example   
+
+        var x = document.querySelectorAll("h1");
+
+        for(let item of x)
+        {
+            item.addEventListener("click",function(){
+                event.target.remove();                      /// click the any element , element will be removed
+            })
+        }
+</script>
+</html>

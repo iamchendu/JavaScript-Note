@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USer List </title>
+</head>
+<body>
+    <!-- In JAvaScript , Suppose data is available or not in array, How to Show with table element ? , How to Display the Browser ? -->
+
+    <h1>User list </h1>
+<!-- Example - 2 -->
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>E-mail</th>
+                <th>Pin</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+</body>
+<script>
+
+
+// Server Data How to Display the Browser  ? 
+
+// Example - 1
+// In the method Html iterating in Javascript .
+
+    const a = [
+            { ID : 1 , name  : "RAM" , email : "ram@gmail.com" , pin : "232"} ,
+            { ID : 2 , name  : "MAHI" , email : "mahi@gmail.com" , pin : "83"} ,
+            { ID : 3 , name  : "KESA" , email : "kesa@gmail.com" , pin : "928"} ,
+            { ID : 4 , name  : "LISA" , email : "lisa@gmail.com" , pin : "93"} ,
+            { ID : 5 , name  : "HENI" , email : "heni@gmail.com" , pin : "02"}
+        ]
+
+        let x = " " ;
+        let ele = document.getElementById('data');
+
+        if(a.length > 0){
+
+                        // 
+            x += "<table>";
+
+                                // In this method way of iterating in javascript style 
+
+                            // x += "<thead>";
+                            //     x += "<tr>";
+                            //         x += "<th> Id </th>";
+                            //         x += "<th> Username</th>";
+                            //         x += "<th> E-mail </th>";
+                            //         x += "<th> PassWord </th>";
+                            //     x += "</tr>";
+                            // x += "</thead>";
+
+
+                x += " <tbody>" ;
+                                                
+                    for(let item of a){
+                        x += "<tr>"
+                            x += " <td> "+item.ID+"</td>";
+                            x += " <td> "+item.name+"</td>"
+                            x += " <td> "+item.email+"</td>"
+                            x += " <td> "+item.pin+"</td>"
+                        x += "</tr>" 
+                    }
+                x += " </tbody>";
+
+            x += "</table>";
+        }
+        else{
+            x += "User Not Found "
+
+                    //  Suppose data not available then display is hide 
+
+            x += document.getElementById("table").style.display = "none";
+        }
+
+                // These all about concatenation 
+        console.log(x);
+        ele.innerHTML = x ;
+        
+
+// In javaScript Backend server Data, How to Display The Browser ?  The way woring with Html ... 
+
+</script>
+</html>

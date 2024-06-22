@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div id="data">
+
+    </div>
+</body>
+<script>
+    const box = ["Html" , " CSS" , 'Bootstrap', 'java', 'lcew', 'lds', 'iiii', 'ppo'];
+    var a = document.getElementById("data");
+
+    for(let item of box){
+
+        a.innerHTML += "<label>";
+
+// Ex -1  work with radio attribute 
+
+            a.innerHTML += "<input type='radio' name='subject' value = ''  />"+item;
+
+// Ex -2  work with checkbox attribute 
+
+            // a.innerHTML += "<input type='checkbox' name='subject' value = ''  />"+item;
+
+        a.innerHTML += "</label>";
+
+    }
+
+    // In javaScript Backend server Data, How to Display The Browser ?  The way woring with Html ... 
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide the data </title>
+</head>
+<body>
+    <u><h1>In any element i clicked that data was hide work with event method </h1></u>
+    
+    <!-- first process -->
+
+    <u><h1>Example - 1 </h1></u>
+
+    <h1 id="one" onclick="hideOne()">Hello one</h1>
+    <h1 id="two" onclick="hideTwo()">Hello Two</h1>
+    <h1 id="three" onclick="hideThree()">Hello Three</h1>
+    <h1 id="four" onclick="hideFour()">Hello Four</h1>
+    <h1 id="five" onclick="hideFive()">Hello Five</h1>
+
+    <br>
+
+
+    <!-- second process  , less data do more -->
+
+    <u><h1>Example - 2 </h1></u>
+
+    <h1 onclick="hide(this)">Hello one</h1>
+    <h1 onclick="hide(this)">Hello Two</h1>
+    <h1 onclick="hide(this)">Hello Three</h1>
+    <h1 onclick="hide(this)">Hello Four</h1>
+    <h1 onclick="hide(this)" >Hello Five</h1>
+
+</body>
+<script>
+
+///// First process
+
+    function hideOne(){
+        document.getElementById("one").style.display = 'none';
+    }
+    function hideTwo(){
+        document.getElementById("two").style.display = 'none';
+    }
+    function hideThree(){
+        document.getElementById("three").style.display = 'none';
+    }
+    function hideFour(){
+        document.getElementById("four").style.display = 'none';
+    }
+    function hideFive(){
+        document.getElementById("five").style.display = 'none';
+    }
+
+
+// //  Second Process no need to 'id' ,  only need onclick with this keyword ;
+
+    function hide(x){
+        x.style.display = 'none';
+    }
+</script>
+</html>
